@@ -1,0 +1,347 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10130f"><title>Cattle — Animal Encyclopedia</title><style>
+:root{--ink:#151712;--paper:#f3f0e8;--paper2:#e9e4d9;--muted:#6d7067;--line:rgba(21,23,18,.14);--accent:#6d7854;--white:#fffdf7;--dark:#10130f;--shadow:0 24px 70px rgba(20,24,14,.16)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Manrope,"Plus Jakarta Sans",system-ui,sans-serif;line-height:1.65}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");z-index:20}
+a{color:inherit}.nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 28px));z-index:30;display:flex;align-items:center;justify-content:space-between;padding:10px 14px 10px 18px;background:rgba(243,240,232,.78);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:999px}.brand{font-weight:800;letter-spacing:.04em;font-size:13px}.navlinks{display:flex;gap:5px}.navlinks a{text-decoration:none;padding:7px 13px;border-radius:999px;font-size:13px}.navlinks a:hover{background:var(--ink);color:var(--paper)}.menu{display:none;border:0;background:none;font-size:22px}
+.hero{min-height:100svh;display:grid;place-items:center;position:relative;overflow:hidden;background:#1c2119;color:#f7f4eb}.hero-media{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,14,9,.86),rgba(10,14,9,.38),rgba(10,14,9,.65)),url("https://images.unsplash.com/photo-1551301608-66d4b6d0d9b0?auto=format&fit=crop&w=2200&q=85") center/cover;animation:ken 18s ease-in-out infinite alternate}.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 35%,rgba(210,220,170,.16),transparent 35%);pointer-events:none}.hero-content{position:relative;z-index:2;width:min(1180px,calc(100% - 36px));padding:130px 0 70px}.eyebrow,.label{font-size:11px;text-transform:uppercase;letter-spacing:.2em;font-weight:750;color:#cdd5bb}.hero h1{font-size:clamp(70px,13vw,190px);line-height:.82;letter-spacing:-.075em;margin:25px 0;max-width:1000px}.hero-sub{font-size:clamp(17px,2vw,23px);max-width:620px;color:#e3e3d9}.creator{margin-top:28px;font-size:13px;color:#c9ccbf}.cta{display:inline-flex;align-items:center;gap:12px;margin-top:34px;padding:14px 20px;border-radius:999px;background:#f4f0e4;color:#161912;text-decoration:none;font-weight:750;border:1px solid rgba(255,255,255,.3);transition:.3s}.cta:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(0,0,0,.25)}.hero-tag{position:absolute;right:5%;bottom:8%;z-index:2;border:1px solid rgba(255,255,255,.25);padding:10px 14px;border-radius:12px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#dfe3d4}
+main{overflow:hidden}.section{width:min(1180px,calc(100% - 36px));margin:auto;padding:115px 0}.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:end}.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:var(--muted);font-weight:800}.display{font-size:clamp(44px,7vw,86px);line-height:.94;letter-spacing:-.06em;margin:15px 0 0}.lead{font-size:clamp(18px,2.2vw,25px);color:#4e514a;max-width:600px}.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:75px}.stat{padding:25px 15px;border-right:1px solid var(--line)}.stat:last-child{border-right:0}.stat b{display:block;font-size:42px;letter-spacing:-.05em}.stat span{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted)}
+.collection-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:35px}.search{width:min(430px,100%);position:relative}.search input{width:100%;border:1px solid var(--line);background:rgba(255,255,255,.38);padding:16px 45px 16px 18px;border-radius:999px;font:inherit;outline:none}.search input:focus{border-color:var(--ink);box-shadow:0 0 0 4px rgba(109,120,84,.12)}.search span{position:absolute;right:17px;top:14px;color:var(--muted)}.result{font-size:12px;color:var(--muted);margin:14px 0 0}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{position:relative;min-height:510px;border:1px solid var(--line);border-radius:28px;overflow:hidden;background:#dad8cb;isolation:isolate;cursor:pointer;transition:transform .45s,box-shadow .45s}.card:nth-child(3n){min-height:610px}.card:hover{transform:translateY(-9px) scale(1.008);box-shadow:var(--shadow)}.card-media{position:absolute;inset:0;background-position:center;background-size:cover;transition:transform .7s}.card:hover .card-media{transform:scale(1.055)}.card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 25%,rgba(8,10,7,.82) 100%);z-index:0}.card-content{position:absolute;left:28px;right:28px;bottom:25px;color:#fff;z-index:2}.field{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#d3dac8}.card h3{font-size:clamp(35px,5vw,60px);letter-spacing:-.055em;line-height:.95;margin:9px 0}.scientific{font-style:italic;color:#d8dccf}.card p{color:#e3e4dd;margin:13px 0;max-width:520px}.pill{display:inline-block;background:rgba(255,255,255,.06);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.28);padding:7px 10px;border-radius:999px;font-size:10px;text-transform:uppercase;letter-spacing:.1em}.empty{padding:50px;text-align:center;border:1px dashed var(--line);border-radius:22px;grid-column:1/-1;color:var(--muted)}
+.directory{background:var(--dark);color:#f5f1e7}.directory .kicker{color:#aeb89a}.directory .display{color:#f5f1e7}.directory-inner{width:min(1180px,calc(100% - 36px));margin:auto;padding:115px 0}.dir-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:45px}.dir-item{border-top:1px solid rgba(255,255,255,.18);padding:17px 3px;display:flex;justify-content:space-between;gap:20px;color:#e8e6dc}.dir-item small{color:#929789;text-transform:uppercase;letter-spacing:.12em}.dir-item:hover{padding-left:10px}.notes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:45px}.note{padding:28px;background:var(--paper2);border-radius:22px;border:1px solid var(--line);min-height:170px}.note b{font-size:19px}.note p{font-size:14px;color:var(--muted)}
+.sources{display:grid;grid-template-columns:1fr 1fr;gap:60px}.source-list{border-top:1px solid var(--line)}.source-list a{display:block;padding:17px 0;border-bottom:1px solid var(--line);text-decoration:none}.source-list a:hover{text-decoration:underline}.footer{background:#0d100c;color:#d9d9cf;padding:60px 18px}.footer-inner{width:min(1180px,100%);margin:auto;display:flex;justify-content:space-between;gap:30px;align-items:end}.footer strong{font-size:24px}.footer small{color:#858a80}
+.modal{position:fixed;inset:0;z-index:50;background:rgba(8,10,7,.76);backdrop-filter:blur(12px);display:none;padding:22px}.modal.open{display:flex;align-items:center;justify-content:center}.modal-panel{background:var(--paper);width:min(1120px,100%);max-height:calc(100svh - 44px);overflow:auto;border-radius:28px;position:relative;box-shadow:0 30px 100px rgba(0,0,0,.35);animation:up .4s ease}.close{position:sticky;float:right;top:18px;margin:18px 18px -55px 0;z-index:5;border:1px solid var(--line);background:rgba(243,240,232,.8);width:42px;height:42px;border-radius:50%;font-size:20px}.profile-hero{min-height:430px;color:#fff;padding:45px;display:flex;align-items:end;position:relative;background-size:cover;background-position:center}.profile-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(8,10,7,.85))}.profile-title{position:relative;z-index:2}.profile-title h2{font-size:clamp(55px,8vw,105px);line-height:.86;letter-spacing:-.065em;margin:12px 0}.profile-body{padding:45px}.profile-section{padding:34px 0;border-top:1px solid var(--line)}.profile-section h3{font-size:12px;text-transform:uppercase;letter-spacing:.17em;margin:0 0 15px}.profile-section p{max-width:820px;font-size:17px;color:#4d5048}.uses{display:flex;flex-wrap:wrap;gap:10px}.use{background:var(--paper2);padding:12px 15px;border-radius:999px;font-size:13px}.breed-list{display:grid;gap:10px}.breed{border:1px solid var(--line);border-radius:16px;background:#faf8f0;overflow:hidden}.breed button{width:100%;text-align:left;border:0;background:none;padding:19px;display:flex;justify-content:space-between;font:inherit;font-weight:800;cursor:pointer}.breed-content{display:none;padding:0 19px 22px;color:#565950}.breed.open .breed-content{display:block}.breed-meta{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}.species-table{width:100%;border-collapse:collapse;min-width:650px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px}.species-table th,.species-table td{padding:14px;text-align:left;border-bottom:1px solid var(--line)}.species-table th{font-size:11px;text-transform:uppercase;letter-spacing:.1em}.warning{padding:17px;border-left:3px solid var(--accent);background:rgba(109,120,84,.09);font-size:14px}.profile-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.fact{padding:20px;border:1px solid var(--line);border-radius:16px;background:#faf8f0}
+
+.image-fallback{position:absolute;inset:0;display:none;place-items:center;background:linear-gradient(145deg,#252a20,#6d7854);color:#f3f0e8;text-align:center;text-transform:uppercase;letter-spacing:.16em;font-size:11px;z-index:-1}.card-media.failed{background-image:none!important}.card-media.failed+.image-fallback{display:grid}
+.reveal{opacity:0;transform:translateY(22px);transition:.8s}.reveal.visible{opacity:1;transform:none}
+@keyframes ken{to{transform:scale(1.06)}}@keyframes up{from{opacity:0;transform:translateY(20px) scale(.985)}to{opacity:1;transform:none}}
+@media(max-width:800px){.nav{top:8px}.navlinks{display:none}.menu{display:block}.nav.mobile-open .navlinks{display:flex;position:absolute;top:58px;right:0;background:rgba(243,240,232,.96);border:1px solid var(--line);border-radius:18px;padding:8px;flex-direction:column;min-width:150px}.intro,.sources{grid-template-columns:1fr;gap:35px}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.grid{grid-template-columns:1fr}.card,.card:nth-child(3n){min-height:500px}.collection-head{display:block}.search{margin-top:25px}.dir-grid{grid-template-columns:1fr}.notes{grid-template-columns:1fr 1fr}.profile-hero{min-height:390px;padding:28px}.profile-body{padding:28px}.profile-facts{grid-template-columns:1fr}.hero-tag{display:none}}
+@media(max-width:480px){.section,.directory-inner{width:min(100% - 28px,1180px);padding:80px 0}.hero-content{width:calc(100% - 28px)}.hero h1{font-size:67px}.stats{margin-top:45px}.notes{grid-template-columns:1fr}.modal{padding:0}.modal-panel{max-height:100svh;border-radius:0}.profile-hero{min-height:370px}.profile-body{padding:22px}.profile-section p{font-size:15px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+
+.breed-visual{display:grid;grid-template-columns:110px 1fr;gap:18px;align-items:stretch}
+.breed-visual .breed-photo{width:110px;height:100%;min-height:110px;object-fit:cover;border-radius:18px;border:1px solid var(--line);background:linear-gradient(135deg,#e9e2d4,#f7f4ec);display:block}
+.breed-visual .breed-photo.fallback{object-fit:contain;padding:14px}
+@media(max-width:640px){.breed-visual{grid-template-columns:88px 1fr;gap:13px}.breed-visual .breed-photo{width:88px;min-height:88px;border-radius:14px}}
+
+
+:root{--accent:#6d7854}.detail-nav{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:15px 5vw;background:rgba(243,240,232,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.detail-nav .brand{font-weight:900;letter-spacing:-.04em;text-decoration:none;color:var(--ink)}.detail-nav .back{border:1px solid var(--line);border-radius:999px;padding:10px 15px;text-decoration:none;color:var(--ink);background:rgba(255,255,255,.35)}.detail-hero{min-height:68vh;display:grid;grid-template-columns:1.05fr .95fr;gap:4vw;align-items:end;padding:7vw 5vw 5vw;background:radial-gradient(circle at 20% 20%,rgba(109,120,84,.15),transparent 35%)}.detail-copy .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:800}.detail-copy h1{font-size:clamp(64px,11vw,150px);line-height:.82;letter-spacing:-.075em;margin:18px 0 22px;max-width:850px}.detail-copy .latin{font-family:Georgia,serif;font-size:clamp(18px,2vw,26px);color:#55584f}.detail-copy .lead{font-size:clamp(18px,2vw,23px);line-height:1.55;color:#4f524a;max-width:760px;margin-top:25px}.detail-hero-media{height:min(66vh,700px);border-radius:32px;overflow:hidden;position:relative;background:#ddd8cc;box-shadow:0 35px 90px rgba(0,0,0,.15)}.detail-hero-media img{width:100%;height:100%;object-fit:cover;display:block}.detail-hero-media:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.22))}.content-wrap{max-width:1280px;margin:auto;padding:0 5vw 8vw}.detail-section{padding:70px 0;border-top:1px solid var(--line)}.detail-section.grid{display:grid;grid-template-columns:.32fr 1fr;gap:6vw}.section-kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:900}.detail-section h2{font-size:clamp(34px,5vw,64px);letter-spacing:-.06em;line-height:.95;margin:12px 0 22px}.detail-section p,.detail-section li{font-size:17px;line-height:1.75;color:#4f524a}.detail-section ul{padding-left:20px}.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.info-card{padding:22px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.35)}.info-card small{display:block;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-size:10px;font-weight:900;margin-bottom:8px}.info-card strong{font-size:18px;line-height:1.25}.breed-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.breed-link{display:grid;grid-template-columns:150px 1fr;min-height:190px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#faf8f0;text-decoration:none;color:var(--ink);transition:.3s ease;box-shadow:0 10px 30px rgba(0,0,0,.04)}.breed-link:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(0,0,0,.11);border-color:rgba(21,23,18,.28)}.breed-link img{width:100%;height:100%;min-height:190px;object-fit:cover;background:#e8e3d7}.breed-link-copy{padding:22px}.breed-link-copy h3{font-size:25px;letter-spacing:-.04em;margin:0 0 8px}.breed-link-copy .meta{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800}.breed-link-copy p{font-size:14px;line-height:1.6;color:#5a5d55;margin:15px 0}.open-label{font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:900}.study-note{padding:25px;border-radius:22px;background:#1b2118;color:#f3f0e8;margin-top:25px}.study-note p{color:#d8dacd;margin:7px 0 0}.source-list a{color:inherit;text-decoration:underline;text-underline-offset:4px}.footer{padding:55px 5vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:13px}@media(max-width:850px){.detail-hero{grid-template-columns:1fr;padding-top:45px}.detail-hero-media{height:48vh;order:-1}.detail-section.grid{grid-template-columns:1fr;gap:20px}.info-grid{grid-template-columns:1fr 1fr}.breed-grid{grid-template-columns:1fr}}@media(max-width:560px){.detail-copy h1{font-size:64px}.info-grid{grid-template-columns:1fr}.breed-link{grid-template-columns:105px 1fr;min-height:150px}.breed-link img{min-height:150px}.breed-link-copy{padding:15px}.breed-link-copy h3{font-size:20px}.detail-section{padding:48px 0}}
+
+/* ===== V4 PREMIUM MOTION SYSTEM ===== */
+:root{--ease:cubic-bezier(.22,1,.36,1);--accent2:#aeb98f}
+body{opacity:0;transition:opacity .7s var(--ease);overflow-x:hidden}
+body.page-ready{opacity:1}
+body.page-leaving{opacity:0;transform:scale(.985);transition:.38s var(--ease)}
+::selection{background:#1b2118;color:#f4f0e4}
+.progress-bar{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,#6d7854,#c2caa8,#6d7854);z-index:9999;box-shadow:0 0 18px rgba(109,120,84,.5)}
+.loader{position:fixed;inset:0;background:#11150f;color:#f4f0e4;z-index:10000;display:grid;place-items:center;transition:opacity .7s var(--ease),visibility .7s var(--ease)}
+.loader.hide{opacity:0;visibility:hidden;pointer-events:none}
+.loader-inner{width:min(420px,calc(100% - 40px));text-align:center}
+.loader-mark{font-size:11px;letter-spacing:.22em;text-transform:uppercase;opacity:.7}
+.loader-title{font-size:clamp(38px,8vw,76px);font-weight:900;letter-spacing:-.07em;line-height:.85;margin:18px 0}
+.loader-line{height:1px;background:rgba(255,255,255,.18);overflow:hidden}
+.loader-line i{display:block;height:100%;width:0;background:#dce2c8;animation:loadline 1.35s var(--ease) forwards}
+@keyframes loadline{to{width:100%}}
+.cursor-glow{position:fixed;width:280px;height:280px;border-radius:50%;pointer-events:none;z-index:1;opacity:0;background:radial-gradient(circle,rgba(174,185,143,.12),transparent 67%);transform:translate(-50%,-50%);transition:opacity .25s}
+.has-cursor .cursor-glow{opacity:1}
+.magnetic{will-change:transform}
+.tilt{transform-style:preserve-3d;will-change:transform}
+.reveal{will-change:transform,opacity}
+.reveal.visible{transition-delay:var(--delay,0ms)}
+.section-rule{height:1px;background:var(--line);margin:22px 0 0}
+.detail-toc{position:sticky;top:74px;z-index:20;display:flex;gap:8px;overflow:auto;padding:10px 0;margin:0 0 35px;scrollbar-width:none;background:linear-gradient(var(--paper),rgba(243,240,232,.86));backdrop-filter:blur(12px)}
+.detail-toc::-webkit-scrollbar{display:none}
+.detail-toc a{white-space:nowrap;text-decoration:none;border:1px solid var(--line);padding:8px 11px;border-radius:999px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:.3s var(--ease)}
+.detail-toc a:hover,.detail-toc a.active{background:#171b13;color:#f4f0e4;border-color:#171b13}
+.gallery{display:grid;grid-template-columns:1.35fr .65fr;gap:14px;margin:45px 0 70px}
+.gallery-main,.gallery-side figure{margin:0;overflow:hidden;border-radius:28px;background:#dcd7ca;border:1px solid var(--line);position:relative}
+.gallery-main{min-height:520px}.gallery-side{display:grid;grid-template-rows:1fr 1fr;gap:14px}
+.gallery-side figure{min-height:253px}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1s var(--ease),filter .7s}
+.gallery figure:hover img{transform:scale(1.045)}
+.gallery-side figure:nth-child(2) img{filter:saturate(.65) contrast(1.05)}
+.gallery-caption{position:absolute;left:16px;bottom:16px;padding:8px 11px;border-radius:999px;background:rgba(12,15,10,.7);backdrop-filter:blur(10px);color:#f4f0e4;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.dossier{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}
+.dossier-card{padding:25px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.35);transition:.35s var(--ease)}
+.dossier-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(20,24,14,.08)}
+.dossier-card small{display:block;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);font-size:10px;font-weight:900;margin-bottom:9px}
+.dossier-card strong{font-size:18px;line-height:1.35}
+.related{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:25px}
+.related a{padding:20px;border:1px solid var(--line);border-radius:20px;text-decoration:none;background:#faf8f0;transition:.3s var(--ease)}
+.related a:hover{transform:translateY(-5px);background:#fffdf7}
+.related small{display:block;color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.related b{display:block;font-size:21px;margin:8px 0}
+.related span{font-size:11px;text-transform:uppercase;letter-spacing:.1em}
+.back-top{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(243,240,232,.84);backdrop-filter:blur(12px);z-index:40;opacity:0;pointer-events:none;transform:translateY(12px);transition:.35s var(--ease)}
+.back-top.show{opacity:1;pointer-events:auto;transform:none}
+@media(max-width:800px){.gallery{grid-template-columns:1fr}.gallery-main{min-height:390px}.gallery-side{grid-template-columns:1fr 1fr;grid-template-rows:1fr}.gallery-side figure{min-height:180px}.dossier,.related{grid-template-columns:1fr}.detail-toc{top:58px}}
+@media(prefers-reduced-motion:reduce){body{transition:none}.loader{transition:none}.progress-bar,.cursor-glow{display:none}.gallery img,.dossier-card,.related a{transition:none}}
+
+
+/* ================= V5 ULTIMATE — EXHIBITION SYSTEM ================= */
+:root{
+ --ink:#14170f;--paper:#f3f0e7;--paper2:#fbfaf5;--moss:#626e4c;--sage:#aab594;
+ --gold:#b69a62;--line:rgba(20,23,15,.13);--shadow:0 30px 90px rgba(20,23,15,.10);
+ --ease:cubic-bezier(.2,.8,.2,1)
+}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(circle at 10% 0%,rgba(170,181,148,.12),transparent 30%),var(--paper)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
+main,.page,.content-wrap,.hero{position:relative;z-index:1}
+.kicker-v5{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.hero-v5{position:relative;min-height:88vh;display:grid;align-items:end;overflow:hidden;border-radius:0 0 42px 42px;background:#161a12}
+.hero-v5:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.66));z-index:1}
+.hero-v5-media{position:absolute;inset:0;background-position:center;background-size:cover;transform:scale(1.06);animation:heroKen 16s ease-in-out infinite alternate}
+@keyframes heroKen{to{transform:scale(1.13) translate3d(-1%,1%,0)}}
+.hero-v5-copy{position:relative;z-index:2;color:#f7f4ea;padding:clamp(30px,7vw,92px);max-width:1100px}
+.hero-v5 h1{font-size:clamp(64px,12vw,168px);line-height:.78;letter-spacing:-.085em;margin:14px 0 28px;font-weight:950}
+.hero-v5 p{max-width:650px;font-size:clamp(15px,2vw,21px);line-height:1.55;color:rgba(247,244,234,.8)}
+.hero-orbit{position:absolute;right:7%;top:14%;z-index:2;width:160px;height:160px;border:1px solid rgba(255,255,255,.22);border-radius:50%;animation:orbit 16s linear infinite}
+.hero-orbit:before{content:"FIELD ARCHIVE · XII";position:absolute;inset:0;display:grid;place-items:center;font-size:9px;letter-spacing:.18em;transform:rotate(-20deg)}
+@keyframes orbit{to{transform:rotate(360deg)}}
+.v5-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.v5-panel{border:1px solid var(--line);background:rgba(255,255,255,.34);border-radius:28px;padding:28px;box-shadow:0 15px 50px rgba(20,23,15,.04)}
+.v5-panel.dark{background:#171b13;color:#f4f1e7;border-color:rgba(255,255,255,.08)}
+.stat-v5{grid-column:span 3;min-height:150px;display:flex;flex-direction:column;justify-content:space-between}
+.stat-v5 strong{font-size:clamp(35px,5vw,64px);letter-spacing:-.06em}
+.stat-v5 span{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.section-v5{padding:clamp(55px,9vw,120px) 0}
+.section-v5 h2{font-size:clamp(40px,7vw,88px);line-height:.88;letter-spacing:-.065em;margin:12px 0 25px}
+.stamp{display:inline-flex;gap:9px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:9px 12px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;background:rgba(255,255,255,.4)}
+.stamp i{width:7px;height:7px;border-radius:50%;background:var(--moss);box-shadow:0 0 0 5px rgba(98,110,76,.10)}
+.collection-card{position:relative;min-height:500px;overflow:hidden;border-radius:30px;border:1px solid var(--line);background:#20251a;color:#fff;text-decoration:none;display:flex;align-items:flex-end;transition:.6s var(--ease)}
+.collection-card:nth-child(1),.collection-card:nth-child(7){grid-column:span 7}
+.collection-card:nth-child(2),.collection-card:nth-child(3),.collection-card:nth-child(4),.collection-card:nth-child(5),.collection-card:nth-child(6){grid-column:span 5}
+.collection-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.82;transition:1s var(--ease)}
+.collection-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 28%,rgba(7,9,6,.86))}
+.collection-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.collection-card:hover img{transform:scale(1.08)}
+.collection-card-content{position:relative;z-index:2;padding:30px;width:100%}
+.collection-card .index{font-size:10px;letter-spacing:.18em;opacity:.65}
+.collection-card h3{font-size:clamp(34px,5vw,68px);letter-spacing:-.065em;line-height:.9;margin:10px 0}
+.collection-card p{max-width:560px;color:rgba(255,255,255,.72);font-size:12px;line-height:1.55}
+.pill-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.pill{border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:7px 9px;font-size:9px;letter-spacing:.08em;text-transform:uppercase;background:rgba(0,0,0,.18);backdrop-filter:blur(8px)}
+.timeline{position:relative;margin-top:40px}
+.timeline:before{content:"";position:absolute;left:18px;top:0;bottom:0;width:1px;background:var(--line)}
+.timeline-item{position:relative;padding:0 0 48px 58px}
+.timeline-dot{position:absolute;left:12px;top:5px;width:13px;height:13px;border-radius:50%;background:var(--paper);border:2px solid var(--moss)}
+.timeline-item h3{font-size:24px;margin:0 0 8px;letter-spacing:-.03em}
+.timeline-item p{max-width:750px;line-height:1.7;color:var(--muted)}
+.search-v5{position:relative;max-width:720px;margin:30px auto}
+.search-v5 input{width:100%;padding:20px 55px 20px 22px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.65);font:inherit;outline:none;box-shadow:0 12px 35px rgba(20,23,15,.05);transition:.3s}
+.search-v5 input:focus{border-color:var(--moss);box-shadow:0 15px 45px rgba(20,23,15,.10)}
+.search-v5 span{position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.fact-strip{display:flex;gap:10px;overflow:auto;padding:4px 0 12px;scrollbar-width:none}
+.fact-strip::-webkit-scrollbar{display:none}
+.fact{min-width:230px;border:1px solid var(--line);border-radius:22px;padding:20px;background:var(--paper2)}
+.fact b{display:block;font-size:28px;letter-spacing:-.05em;margin:5px 0}
+.fact small{color:var(--muted);line-height:1.5}
+.source-card{display:flex;gap:18px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--line)}
+.source-no{font-size:10px;letter-spacing:.15em;color:var(--muted)}
+.source-card strong{display:block;margin-bottom:5px}
+.source-card span{color:var(--muted);font-size:12px;line-height:1.5}
+.breed-index{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.breed-index a{display:block;padding:16px;border:1px solid var(--line);border-radius:17px;text-decoration:none;color:inherit;background:rgba(255,255,255,.3);transition:.3s var(--ease)}
+.breed-index a:hover{transform:translateY(-4px);background:#fffdf8}
+.breed-index small{display:block;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.12em}
+.breed-index b{display:block;margin-top:7px;font-size:16px}
+@media(max-width:850px){.stat-v5{grid-column:span 6}.collection-card,.collection-card:nth-child(n){grid-column:span 12;min-height:390px}.breed-index{grid-template-columns:repeat(2,1fr)}.hero-v5{min-height:78vh;border-radius:0 0 28px 28px}.hero-orbit{width:100px;height:100px;right:5%;top:11%}}
+@media(max-width:520px){.stat-v5{grid-column:span 12}.v5-panel{padding:20px}.collection-card-content{padding:22px}.breed-index{grid-template-columns:1fr 1fr}.hero-v5 h1{font-size:65px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}}
+
+</style></head><body><nav class="detail-nav"><a class="brand" href="index.html">ANIMAL ENCYCLOPEDIA</a><a class="back" href="index.html#animals">← Collection</a></nav><main><section class="detail-hero"><div class="detail-copy"><div class="eyebrow">FIELD 01 · ANIMAL PROFILE</div><h1>Cattle</h1><div class="latin">Bos indicus / Bos taurus</div><p class="lead">Cattle are central to Indian mixed farming, with indigenous populations valued for local adaptation and dairy or draught roles.</p></div><div class="detail-hero-media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg" alt="Cattle"></div></section><div class="content-wrap"><section class="detail-section grid"><div><div class="section-kicker">01 · Field overview</div><h2>Understanding Cattle</h2></div><div><p>Cattle contribute to dairy production, farm work, manure recycling and breeding programmes. Indigenous cattle are especially important where adaptation to local climates and production systems matters.</p><div class="info-grid"><div class="info-card"><small>Scientific identity</small><strong>Bos indicus / Bos taurus</strong></div><div class="info-card"><small>Category</small><strong>Large ruminant · Dairy &amp; draught</strong></div><div class="info-card"><small>Directory</small><strong>12 breeds</strong></div></div></div></section><section class="detail-section grid"><div><div class="section-kicker">02 · Identification</div><h2>Form, function & field recognition</h2></div><div><p>Large ruminants with a four-compartment digestive system adapted to fibrous feeds. Body form, coat, horns and hump development vary among breeds.</p><p>Identification should combine visible morphology, geographic association, production purpose and recognised breed descriptors rather than relying on one feature alone.</p><ul><li>Observe body type, coat/skin/feather pattern and head or horn features where relevant.</li><li>Relate the animal to its production role and local agro-climatic environment.</li><li>Use institutional breed descriptors for final identification.</li></ul></div></section><section class="detail-section grid"><div><div class="section-kicker">03 · Indian agriculture</div><h2>Why this group matters</h2></div><div><p>Cattle support food production and farm livelihoods while fitting into integrated crop–livestock systems.</p><div class="uses"><span class="use">Milk</span><span class="use">Draught power</span><span class="use">Manure</span><span class="use">Breeding</span></div></div></section><section class="detail-section grid"><div><div class="section-kicker">04 · Management</div><h2>Daily husbandry</h2></div><div><p>Provide clean water, balanced feed, shade and ventilation, hygienic housing, routine observation and appropriate veterinary care. Breeding and vaccination programmes should follow local professional guidance.</p><p>Good husbandry combines suitable feed and water, clean housing, ventilation, observation, preventive healthcare, biosecurity, humane handling and records. Exact rations and medicines should follow qualified local advice.</p></div></section><section class="detail-section"><div class="section-kicker">05 · Directory</div><h2>Breed collection</h2><p>Click any entry to leave the collection and open a dedicated, detailed profile page.</p><div class="breed-grid"><a class="breed-link" href="breed.html?animal=cattle&breed=Gir"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Gir%20cattle.jpg" alt="Gir Cattle" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg'"><div class="breed-link-copy"><div class="meta">Breed · Gujarat</div><h3>Gir</h3><p>Distinctive convex forehead; well adapted to hot conditions.</p><span class="open-label">Open full profile →</span></div></a><a class="breed-link" href="breed.html?animal=cattle&breed=Sahiwal"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sahiwal%20cattle.jpg" alt="Sahiwal Cattle" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg'"><div class="breed-link-copy"><div class="meta">Breed · Punjab region</div><h3>Sahiwal</h3><p>Recognised for dairy ability and heat tolerance.</p><span class="open-label">Open full profile →</span></div></a><a class="breed-link" href="breed.html?animal=cattle&breed=Red Sindhi"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg" alt="Red Sindhi Cattle" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg'"><div class="breed-link-copy"><div class="meta">Breed · Sindh region</div><h3>Red Sindhi</h3><p>Red coat and strong adaptation to warm climates.</p><span class="open-label">Open full profile →</span></div></a><a class="breed-link" href="breed.html?animal=cattle&breed=Tharparkar"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tharparkar%20cattle.jpg" alt="Tharparkar Cattle" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg'"><div class="breed-link-copy"><div class="meta">Breed · Rajasthan/Sindh region</div><h3>Tharparkar</h3><p>Hardy cattle associated with arid and semi-arid conditions.</p><span class="open-label">Open full profile →</span></div></a><a class="breed-link" href="breed.html?animal=cattle&breed=Kankrej"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kankrej%20cattle.jpg" alt="Kankrej Cattle" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg'"><div class="breed-link-copy"><div class="meta">Breed · Gujarat/Rajasthan</div><h3>Kankrej</h3><p>Strong build with useful draught characteristics.</p><span class="open-label">Open full profile →</span></div></a><a class="breed-link" href="breed.html?animal=cattle&breed=Hariana"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hariana%20cattle.jpg" alt="Hariana Cattle" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg'"><div class="breed-link-copy"><div class="meta">Breed · Haryana region</div><h3>Hariana</h3><p>Important north Indian cattle with draught and breeding value.</p><span class="open-label">Open full profile →</span></div></a><a class="breed-link" href="breed.html?animal=cattle&breed=Rathi"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Rathi%20cattle.jpg" alt="Rathi Cattle" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg'"><div class="breed-link-copy"><div class="meta">Breed · Rajasthan</div><h3>Rathi</h3><p>Indigenous breed associated with north-western dry regions.</p><span class="open-label">Open full profile →</span></div></a><a class="breed-link" href="breed.html?animal=cattle&breed=Ongole"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ongole%20cattle.jpg" alt="Ongole Cattle" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg'"><div class="breed-link-copy"><div class="meta">Breed · Andhra Pradesh</div><h3>Ongole</h3><p>Large, powerful cattle with strong draught reputation.</p><span class="open-label">Open full profile →</span></div></a><a class="breed-link" href="breed.html?animal=cattle&breed=Kangayam"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kangayam%20cattle.jpg" alt="Kangayam Cattle" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg'"><div class="breed-link-copy"><div class="meta">Breed · Tamil Nadu</div><h3>Kangayam</h3><p>Hardy South Indian draught cattle.</p><span class="open-label">Open full profile →</span></div></a><a class="breed-link" href="breed.html?animal=cattle&breed=Hallikar"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hallikar%20cattle.jpg" alt="Hallikar Cattle" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg'"><div class="breed-link-copy"><div class="meta">Breed · Karnataka</div><h3>Hallikar</h3><p>Traditional Karnataka draught breed.</p><span class="open-label">Open full profile →</span></div></a><a class="breed-link" href="breed.html?animal=cattle&breed=Gaolao"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Gaolao%20cattle.jpg" alt="Gaolao Cattle" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg'"><div class="breed-link-copy"><div class="meta">Breed · Maharashtra/Madhya Pradesh</div><h3>Gaolao</h3><p>Adapted to central Indian farming systems.</p><span class="open-label">Open full profile →</span></div></a><a class="breed-link" href="breed.html?animal=cattle&breed=Deoni"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Deoni%20cattle.jpg" alt="Deoni Cattle" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg'"><div class="breed-link-copy"><div class="meta">Breed · Maharashtra/Karnataka region</div><h3>Deoni</h3><p>Useful indigenous breed with dairy and draught roles.</p><span class="open-label">Open full profile →</span></div></a></div></section><section class="detail-section grid"><div><div class="section-kicker">06 · Field notes</div><h2>Study cues</h2></div><div><div class="info-grid"><div class="info-card"><small>Field note</small><strong>Cattle are ruminants.</strong></div><div class="info-card"><small>Field note</small><strong>Indigenous breeds can be valuable for local adaptation.</strong></div><div class="info-card"><small>Field note</small><strong>Manure can return nutrients to crop systems.</strong></div></div></div></section><section class="detail-section source-list"><div class="section-kicker">07 · Sources</div><h2>Research trail</h2><p>Core references include <a href="https://nbagr.res.in/brc" target="_blank" rel="noopener">ICAR-NBAGR Breed Registration Cell</a>, official breed directories, and <a href="https://icar.gov.in/" target="_blank" rel="noopener">ICAR</a> fisheries/livestock resources.</p></section></div></main><footer class="footer"><div><b>ANIMAL ENCYCLOPEDIA</b><br>Class XII Agriculture · Animal Husbandry Project</div><div>Created by Sankalp Tiwari &amp; Shiva Pal</div></footer><script>
+
+(function(){
+'use strict';
+const qs=(s,r=document)=>r.querySelector(s), qsa=(s,r=document)=>[...r.querySelectorAll(s)];
+const localLink=u=>{try{const x=new URL(u,location.href);return x.origin===location.origin&&!x.hash&&!x.href.startsWith('mailto:')&&!x.href.startsWith('tel:')}catch{return false}};
+document.documentElement.classList.add('js');
+document.body.classList.add('page-ready');
+
+/* Loader */
+const loader=document.createElement('div');
+loader.className='loader';
+loader.innerHTML='<div class="loader-inner"><div class="loader-mark">Indian Agriculture · Field Archive</div><div class="loader-title">ANIMAL<br>ENCYCLOPEDIA</div><div class="loader-line"><i></i></div></div>';
+document.body.prepend(loader);
+window.addEventListener('load',()=>setTimeout(()=>loader.classList.add('hide'),650));
+
+/* Progress */
+const progress=document.createElement('div'); progress.className='progress-bar'; document.body.append(progress);
+const updateProgress=()=>{const d=document.documentElement,s=d.scrollHeight-innerHeight;progress.style.width=(s>0?(scrollY/s)*100:0)+'%'}; addEventListener('scroll',updateProgress,{passive:true}); updateProgress();
+
+/* Back to top */
+const top=document.createElement('button'); top.className='back-top'; top.setAttribute('aria-label','Back to top'); top.textContent='↑'; document.body.append(top);
+addEventListener('scroll',()=>top.classList.toggle('show',scrollY>700),{passive:true}); top.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+
+/* Cursor spotlight + magnetic motion on desktop */
+if(matchMedia('(pointer:fine)').matches){
+ document.body.classList.add('has-cursor');
+ const glow=document.createElement('div'); glow.className='cursor-glow'; document.body.append(glow);
+ addEventListener('pointermove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'},{passive:true});
+ qsa('.magnetic').forEach(el=>el.addEventListener('pointermove',e=>{
+   const r=el.getBoundingClientRect(),x=(e.clientX-r.left-r.width/2)/r.width,y=(e.clientY-r.top-r.height/2)/r.height;
+   el.style.transform=`translate(${x*9}px,${y*7}px)`;
+ }));
+ qsa('.magnetic').forEach(el=>el.addEventListener('pointerleave',()=>el.style.transform=''));
+ qsa('.card').forEach(card=>{
+   card.classList.add('tilt');
+   card.addEventListener('pointermove',e=>{
+     const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+     card.style.transform=`perspective(900px) rotateX(${y*-3}deg) rotateY(${x*3}deg) translateY(-7px)`;
+   });
+   card.addEventListener('pointerleave',()=>card.style.transform='');
+ });
+}
+
+/* Reveal observer */
+const rev=qsa('.reveal');
+if('IntersectionObserver' in window){
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+ rev.forEach((el,i)=>{el.style.setProperty('--delay',Math.min(i*45,240)+'ms');io.observe(el)});
+}else rev.forEach(e=>e.classList.add('visible'));
+
+/* Smooth local page transitions */
+qsa('a').forEach(a=>{
+ a.addEventListener('click',e=>{
+  if(e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey) return;
+  const href=a.getAttribute('href');
+  if(!href||href.startsWith('#')||!localLink(href)||a.target==='_blank') return;
+  e.preventDefault(); document.body.classList.add('page-leaving'); setTimeout(()=>location.href=href,280);
+ });
+});
+
+/* Mobile nav */
+const nav=qs('.nav'); const menu=qs('.menu');
+if(nav&&menu) menu.addEventListener('click',()=>nav.classList.toggle('mobile-open'));
+
+/* Build sticky TOC for detailed pages */
+const sections=qsa('.detail-section');
+if(sections.length){
+ const toc=document.createElement('nav'); toc.className='detail-toc'; toc.setAttribute('aria-label','On this page');
+ sections.forEach((s,i)=>{
+   if(!s.id) s.id='section-'+(i+1);
+   const heading=qs('h2',s); if(!heading)return;
+   const a=document.createElement('a'); a.href='#'+s.id; a.textContent=String(i+1).padStart(2,'0')+' · '+heading.textContent.replace(/^\s+/,'').slice(0,28);
+   toc.append(a);
+ });
+ const wrap=qs('.content-wrap'); if(wrap) wrap.prepend(toc);
+ const links=qsa('a',toc);
+ const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(x=>x.classList.toggle('active',x.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-35% 0px -55% 0px'});
+ sections.forEach(s=>io2.observe(s));
+}
+
+/* Add a premium image gallery to detailed animal pages */
+if(qs('.detail-hero') && !qs('.gallery')){
+ const heroImg=qs('.detail-hero-media img');
+ const src=heroImg?.getAttribute('src')||'';
+ const alt=heroImg?.getAttribute('alt')||'Animal field image';
+ const section=document.createElement('section'); section.className='gallery reveal';
+ section.innerHTML=`<figure class="gallery-main"><img loading="lazy" src="${src}" alt="${alt} — field archive image"><span class="gallery-caption">01 · Field view</span></figure>
+ <div class="gallery-side"><figure><img loading="lazy" src="${src}" alt="${alt} — specimen detail" style="object-position:30% 50%"><span class="gallery-caption">02 · Recognition</span></figure>
+ <figure><img loading="lazy" src="${src}" alt="${alt} — archive detail" style="object-position:70% 50%"><span class="gallery-caption">03 · Archive plate</span></figure></div>`;
+ qs('.content-wrap')?.prepend(section);
+}
+
+/* Add expanded animal information blocks on animal pages */
+const title=qs('.detail-copy h1')?.textContent?.trim();
+if(title && !qs('.dossier')){
+ const copy={
+  Cattle:{biology:'Ruminant livestock with a four-compartment stomach; major roles include milk, draught work, manure and breeding.',recognition:'Breed identification combines coat, body conformation, horns, hump development, head shape and regional association.',system:'Fits integrated crop–livestock systems through milk, farm work, manure recycling and breeding value.',care:'Clean water, suitable feed, shade, ventilation, hygienic housing, preventive health care and humane handling.'},
+  Buffalo:{biology:'Domestic water buffalo (Bubalus bubalis), widely important in Indian dairy systems and valued for milk with relatively high fat and total solids.',recognition:'Breed recognition uses body size, horn form, coat, head shape, udder traits and home tract.',system:'Important for dairy livelihoods, breeding, manure recycling and, in suitable systems, farm work.',care:'Reliable water access, heat management, balanced feeding, clean housing and routine health observation are especially important.'},
+  Goat:{biology:'Small ruminant livestock valued for meat, milk, skin and fibre/hair; goats are adaptable to many smallholder systems.',recognition:'Study body size, coat pattern, ear and horn form, facial profile and regional association.',system:'Often fits smallholder and mixed farming because of flexible feeding and relatively small body size.',care:'Provide clean water, appropriate roughage/concentrates, dry housing, parasite control and careful kid management.'},
+  Sheep:{biology:'Small ruminants primarily associated with grazing, meat and wool/fibre production, with breeds adapted to diverse Indian environments.',recognition:'Use fleece or hair characteristics, body form, colour, ears, horns where present and home tract.',system:'Supports wool/fibre, meat, manure and rural livelihoods, especially in grazing-based systems.',care:'Good grazing or feed supply, clean water, shelter, parasite management, hoof care and flock health monitoring.'},
+  Pig:{biology:'Monogastric livestock primarily raised for meat; pig production can also contribute manure and livelihood income.',recognition:'Breed study considers body colour, ear form, body shape, growth type, production purpose and origin.',system:'Important in specialised and smallholder meat-production systems where local conditions and management are suitable.',care:'Clean housing, clean water, balanced feed, biosecurity, sanitation, temperature management and humane handling.'},
+  'Chicken / Poultry':{biology:'Domestic poultry are kept mainly for eggs and meat. Breeds and commercial strains should be distinguished in study notes.',recognition:'Observe plumage, body form, comb, shank characteristics and documented breed descriptors.',system:'Egg and meat production can be integrated into smallholder, backyard and commercial systems.',care:'Balanced feed, clean water, ventilation, litter hygiene, biosecurity and appropriate vaccination/health programmes.'},
+  Fish:{biology:'The collection focuses on important freshwater species used in Indian aquaculture: Rohu, Catla and Mrigal.',recognition:'Fish species are studied by body form, scale pattern, mouth position, feeding zone and scientific identity.',system:'Composite fish culture commonly combines complementary feeding niches to use pond resources efficiently.',care:'Water quality, stocking, feeding, pond preparation, health monitoring and responsible management are central to aquaculture.'}
+ };
+ const d=copy[title];
+ if(d){
+   const sec=document.createElement('section'); sec.className='detail-section reveal';
+   sec.innerHTML='<div class="section-kicker">02A · Expanded field dossier</div><h2>Study the system, not just the name.</h2><div class="dossier">'+
+   [['Biology & identity',d.biology],['Field recognition',d.recognition],['Agricultural system',d.system],['Management focus',d.care]].map(x=>`<article class="dossier-card"><small>${x[0]}</small><strong>${x[1]}</strong></article>`).join('')+'</div>';
+   qs('.content-wrap')?.insertBefore(sec,qs('.content-wrap').children[1]||null);
+ }
+}
+
+/* Breed profile: richer dossier + visual gallery + related entries */
+const profileTitle=qs('.detail-copy h1')?.textContent?.trim();
+if(profileTitle && location.pathname.endsWith('breed.html')){
+ const script=[...document.scripts].find(s=>s.textContent.includes('const animals='));
+ if(script){
+  try{
+   const m=script.textContent.match(/const animals=(.*?);const breedImages=/s);
+   if(m){
+    const animals=JSON.parse(m[1]);
+    const p=new URLSearchParams(location.search),aid=p.get('animal'),bn=p.get('breed');
+    const a=animals.find(x=>x.id===aid), entries=a&&(a.breeds||a.species)||[], entry=entries.find(x=>x[0]===bn);
+    if(a&&entry){
+      const [name,region,type,desc]=entry;
+      const existingGallery=qs('.gallery');
+      if(!existingGallery){
+       const src=qs('.detail-hero-media img')?.src||'';
+       const g=document.createElement('section'); g.className='gallery reveal';
+       g.innerHTML=`<figure class="gallery-main"><img loading="lazy" src="${src}" alt="${name} — primary field image"><span class="gallery-caption">01 · Primary specimen</span></figure>
+       <div class="gallery-side"><figure><img loading="lazy" src="${src}" alt="${name} — identification view" style="object-position:25% 50%"><span class="gallery-caption">02 · Identification</span></figure><figure><img loading="lazy" src="${src}" alt="${name} — archive view" style="object-position:75% 50%"><span class="gallery-caption">03 · Archive crop</span></figure></div>`;
+       qs('.content-wrap')?.prepend(g);
+      }
+      const sec=document.createElement('section'); sec.className='detail-section reveal';
+      const role=(type||'').toLowerCase().includes('dairy')?'Dairy-oriented':(type||'').toLowerCase().includes('draught')?'Draught-oriented':(type||'').toLowerCase().includes('wool')?'Wool/fibre-oriented':(type||'').toLowerCase().includes('meat')?'Meat-oriented':'Regionally adapted production';
+      sec.innerHTML=`<div class="section-kicker">05A · Detailed breed dossier</div><h2>${name}: a deeper field study</h2><div class="dossier">
+      <article class="dossier-card"><small>Recognised identity</small><strong>${name} is documented as a ${aid==='fish'?'freshwater species':'breed'} associated with ${region}.</strong></article>
+      <article class="dossier-card"><small>Production orientation</small><strong>${role}. Farm value depends on genetics, nutrition, health and management.</strong></article>
+      <article class="dossier-card"><small>Distinguishing clue</small><strong>${desc}</strong></article>
+      <article class="dossier-card"><small>Adaptation principle</small><strong>Study how the animal's form, behaviour and production role relate to its home environment and farming system.</strong></article>
+      <article class="dossier-card"><small>Management principle</small><strong>Match feed, water, housing, health care and handling to age, climate and production purpose.</strong></article>
+      <article class="dossier-card"><small>Academic caution</small><strong>A photograph alone is not enough for definitive breed identification; use recognised institutional descriptors.</strong></article>
+      </div>`;
+      const sections=qsa('.detail-section'); const target=sections[Math.min(4,sections.length-1)]; qs('.content-wrap')?.insertBefore(sec,target||null);
+
+      const rel=document.createElement('section'); rel.className='detail-section reveal';
+      const related=entries.filter(x=>x[0]!==name).slice(0,3);
+      rel.innerHTML=`<div class="section-kicker">10 · Related collection</div><h2>Continue exploring</h2><div class="related">${related.map(x=>`<a href="breed.html?animal=${encodeURIComponent(aid)}&breed=${encodeURIComponent(x[0])}"><small>${aid==='fish'?'Species':'Breed'} · ${x[1]}</small><b>${x[0]}</b><span>Open full profile →</span></a>`).join('')}</div>`;
+      qs('.content-wrap')?.append(rel);
+    }
+   }
+  }catch(err){}
+ }
+}
+})();
+
+</script><script>
+(function(){
+ const root=document.body;
+ const mk=(tag,cls,html='')=>{const e=document.createElement(tag);e.className=cls;e.innerHTML=html;return e};
+ // Loader
+ const L=mk('div','v5-loader','<div class="v5-loader-inner"><span>INDIAN AGRICULTURE · FIELD ARCHIVE</span><strong>ANIMAL<br>ENCYCLOPEDIA</strong><i></i><small>CLASS XII · CURATING COLLECTION</small></div>');
+ root.prepend(L);
+ const Lstyle=document.createElement('style');Lstyle.textContent=`
+ .v5-loader{position:fixed;inset:0;background:#151910;color:#f3f0e7;z-index:20000;display:grid;place-items:center;transition:.8s cubic-bezier(.2,.8,.2,1)}
+ .v5-loader.done{opacity:0;visibility:hidden;pointer-events:none}
+ .v5-loader-inner{width:min(560px,calc(100% - 44px))}
+ .v5-loader span,.v5-loader small{font-size:9px;letter-spacing:.2em;opacity:.6}
+ .v5-loader strong{display:block;font-size:clamp(52px,11vw,120px);line-height:.76;letter-spacing:-.08em;margin:25px 0}
+ .v5-loader i{display:block;height:1px;background:#f3f0e7;transform-origin:left;animation:v5load 1.2s ease forwards}
+ @keyframes v5load{from{transform:scaleX(0)}to{transform:scaleX(1)}}`;document.head.append(Lstyle);
+ addEventListener('load',()=>setTimeout(()=>L.classList.add('done'),650));
+ // Global progress
+ const P=mk('div','v5-progress');root.append(P);P.style.cssText='position:fixed;top:0;left:0;width:0;height:3px;background:#626e4c;z-index:15000;transition:width .1s';
+ const prog=()=>{let d=document.documentElement;P.style.width=(scrollY/(d.scrollHeight-innerHeight||1)*100)+'%'};
+ addEventListener('scroll',prog,{passive:true});prog();
+ // reveal all major blocks
+ const candidates=[...document.querySelectorAll('section,article,.card,.panel,.source-card,.timeline-item,.breed-card,.v5-panel,.collection-card')];
+ candidates.forEach((e,i)=>{e.classList.add('v5-reveal');e.style.setProperty('--v5-delay',Math.min(i%7*55,330)+'ms')});
+ const st=document.createElement('style');st.textContent='.v5-reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1) var(--v5-delay),transform .8s cubic-bezier(.2,.8,.2,1) var(--v5-delay)}.v5-reveal.v5-in{opacity:1;transform:none}';document.head.append(st);
+ if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('v5-in');io.unobserve(x.target)}}),{threshold:.08});candidates.forEach(e=>io.observe(e))}else candidates.forEach(e=>e.classList.add('v5-in'));
+ // Animated counters
+ document.querySelectorAll('[data-counter]').forEach(el=>{let target=parseInt(el.dataset.counter,10)||0;let done=false;const go=()=>{if(done)return;done=true;let t0=performance.now();const f=t=>{let p=Math.min(1,(t-t0)/1000),v=Math.round((1-Math.pow(1-p,3))*target);el.textContent=v.toLocaleString();if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)};if('IntersectionObserver'in window)new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)go()}),{threshold:.8}).observe(el);else go()});
+ // Tilt for premium cards
+ if(matchMedia('(pointer:fine)').matches){
+   document.querySelectorAll('.collection-card,.v5-panel,.breed-index a').forEach(card=>{card.addEventListener('pointermove',e=>{let r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(900px) rotateX(${y*-1.8}deg) rotateY(${x*1.8}deg) translateY(-5px)`});card.addEventListener('pointerleave',()=>card.style.transform='')});
+ }
+ // Local page transitions
+ document.querySelectorAll('a[href]').forEach(a=>a.addEventListener('click',e=>{if(e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;let h=a.getAttribute('href');if(!h||h.startsWith('#')||h.startsWith('http')||h.startsWith('mailto:'))return;e.preventDefault();root.classList.add('v5-leave');setTimeout(()=>location.href=h,260)}));
+ const s=document.createElement('style');s.textContent='.v5-leave{opacity:0;transform:scale(.99);transition:.28s ease}';document.head.append(s);
+ // Back to top
+ const b=mk('button','v5-top','↑');b.setAttribute('aria-label','Back to top');b.style.cssText='position:fixed;right:18px;bottom:18px;width:45px;height:45px;border-radius:50%;border:1px solid rgba(20,23,15,.15);background:rgba(243,240,231,.86);backdrop-filter:blur(10px);z-index:1000;opacity:0;pointer-events:none;transition:.3s';root.append(b);b.onclick=()=>scrollTo({top:0,behavior:'smooth'});addEventListener('scroll',()=>{b.style.opacity=scrollY>650?'1':'0';b.style.pointerEvents=scrollY>650?'auto':'none'},{passive:true});
+ // Keyboard escape can close existing modals
+ addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('[aria-modal="true"],.modal,.drawer').forEach(x=>{if(x.style.display==='block'||x.classList.contains('open')){x.classList.remove('open');x.style.display='none'}})}});
+})();
+</script></body></html>

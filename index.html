@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#10130f">
+<meta name="description" content="Animal Encyclopedia — a Class XII Agriculture Animal Husbandry field archive created by Sankalp Tiwari.">
+<title>Animal Encyclopedia — Class XII Agriculture</title>
+<style>
+:root{--ink:#151712;--paper:#f3f0e8;--paper2:#e9e4d9;--muted:#6d7067;--line:rgba(21,23,18,.14);--accent:#6d7854;--white:#fffdf7;--dark:#10130f;--shadow:0 24px 70px rgba(20,24,14,.16)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Manrope,"Plus Jakarta Sans",system-ui,sans-serif;line-height:1.65}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");z-index:20}
+a{color:inherit}.nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 28px));z-index:30;display:flex;align-items:center;justify-content:space-between;padding:10px 14px 10px 18px;background:rgba(243,240,232,.78);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:999px}.brand{font-weight:800;letter-spacing:.04em;font-size:13px}.navlinks{display:flex;gap:5px}.navlinks a{text-decoration:none;padding:7px 13px;border-radius:999px;font-size:13px}.navlinks a:hover{background:var(--ink);color:var(--paper)}.menu{display:none;border:0;background:none;font-size:22px}
+.hero{min-height:100svh;display:grid;place-items:center;position:relative;overflow:hidden;background:#1c2119;color:#f7f4eb}.hero-media{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,14,9,.86),rgba(10,14,9,.38),rgba(10,14,9,.65)),url("https://images.unsplash.com/photo-1551301608-66d4b6d0d9b0?auto=format&fit=crop&w=2200&q=85") center/cover;animation:ken 18s ease-in-out infinite alternate}.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 35%,rgba(210,220,170,.16),transparent 35%);pointer-events:none}.hero-content{position:relative;z-index:2;width:min(1180px,calc(100% - 36px));padding:130px 0 70px}.eyebrow,.label{font-size:11px;text-transform:uppercase;letter-spacing:.2em;font-weight:750;color:#cdd5bb}.hero h1{font-size:clamp(70px,13vw,190px);line-height:.82;letter-spacing:-.075em;margin:25px 0;max-width:1000px}.hero-sub{font-size:clamp(17px,2vw,23px);max-width:620px;color:#e3e3d9}.creator{margin-top:28px;font-size:13px;color:#c9ccbf}.cta{display:inline-flex;align-items:center;gap:12px;margin-top:34px;padding:14px 20px;border-radius:999px;background:#f4f0e4;color:#161912;text-decoration:none;font-weight:750;border:1px solid rgba(255,255,255,.3);transition:.3s}.cta:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(0,0,0,.25)}.hero-tag{position:absolute;right:5%;bottom:8%;z-index:2;border:1px solid rgba(255,255,255,.25);padding:10px 14px;border-radius:12px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#dfe3d4}
+main{overflow:hidden}.section{width:min(1180px,calc(100% - 36px));margin:auto;padding:115px 0}.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:end}.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:var(--muted);font-weight:800}.display{font-size:clamp(44px,7vw,86px);line-height:.94;letter-spacing:-.06em;margin:15px 0 0}.lead{font-size:clamp(18px,2.2vw,25px);color:#4e514a;max-width:600px}.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:75px}.stat{padding:25px 15px;border-right:1px solid var(--line)}.stat:last-child{border-right:0}.stat b{display:block;font-size:42px;letter-spacing:-.05em}.stat span{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted)}
+.collection-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:35px}.search{width:min(430px,100%);position:relative}.search input{width:100%;border:1px solid var(--line);background:rgba(255,255,255,.38);padding:16px 45px 16px 18px;border-radius:999px;font:inherit;outline:none}.search input:focus{border-color:var(--ink);box-shadow:0 0 0 4px rgba(109,120,84,.12)}.search span{position:absolute;right:17px;top:14px;color:var(--muted)}.result{font-size:12px;color:var(--muted);margin:14px 0 0}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{position:relative;min-height:510px;border:1px solid var(--line);border-radius:28px;overflow:hidden;background:#dad8cb;isolation:isolate;cursor:pointer;transition:transform .45s,box-shadow .45s}.card:nth-child(3n){min-height:610px}.card:hover{transform:translateY(-9px) scale(1.008);box-shadow:var(--shadow)}.card-media{position:absolute;inset:0;background-position:center;background-size:cover;transition:transform .7s}.card:hover .card-media{transform:scale(1.055)}.card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 25%,rgba(8,10,7,.82) 100%);z-index:0}.card-content{position:absolute;left:28px;right:28px;bottom:25px;color:#fff;z-index:2}.field{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#d3dac8}.card h3{font-size:clamp(35px,5vw,60px);letter-spacing:-.055em;line-height:.95;margin:9px 0}.scientific{font-style:italic;color:#d8dccf}.card p{color:#e3e4dd;margin:13px 0;max-width:520px}.pill{display:inline-block;background:rgba(255,255,255,.06);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.28);padding:7px 10px;border-radius:999px;font-size:10px;text-transform:uppercase;letter-spacing:.1em}.empty{padding:50px;text-align:center;border:1px dashed var(--line);border-radius:22px;grid-column:1/-1;color:var(--muted)}
+.directory{background:var(--dark);color:#f5f1e7}.directory .kicker{color:#aeb89a}.directory .display{color:#f5f1e7}.directory-inner{width:min(1180px,calc(100% - 36px));margin:auto;padding:115px 0}.dir-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:45px}.dir-item{border-top:1px solid rgba(255,255,255,.18);padding:17px 3px;display:flex;justify-content:space-between;gap:20px;color:#e8e6dc}.dir-item small{color:#929789;text-transform:uppercase;letter-spacing:.12em}.dir-item:hover{padding-left:10px}.notes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:45px}.note{padding:28px;background:var(--paper2);border-radius:22px;border:1px solid var(--line);min-height:170px}.note b{font-size:19px}.note p{font-size:14px;color:var(--muted)}
+.sources{display:grid;grid-template-columns:1fr 1fr;gap:60px}.source-list{border-top:1px solid var(--line)}.source-list a{display:block;padding:17px 0;border-bottom:1px solid var(--line);text-decoration:none}.source-list a:hover{text-decoration:underline}.footer{background:#0d100c;color:#d9d9cf;padding:60px 18px}.footer-inner{width:min(1180px,100%);margin:auto;display:flex;justify-content:space-between;gap:30px;align-items:end}.footer strong{font-size:24px}.footer small{color:#858a80}
+.modal{position:fixed;inset:0;z-index:50;background:rgba(8,10,7,.76);backdrop-filter:blur(12px);display:none;padding:22px}.modal.open{display:flex;align-items:center;justify-content:center}.modal-panel{background:var(--paper);width:min(1120px,100%);max-height:calc(100svh - 44px);overflow:auto;border-radius:28px;position:relative;box-shadow:0 30px 100px rgba(0,0,0,.35);animation:up .4s ease}.close{position:sticky;float:right;top:18px;margin:18px 18px -55px 0;z-index:5;border:1px solid var(--line);background:rgba(243,240,232,.8);width:42px;height:42px;border-radius:50%;font-size:20px}.profile-hero{min-height:430px;color:#fff;padding:45px;display:flex;align-items:end;position:relative;background-size:cover;background-position:center}.profile-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(8,10,7,.85))}.profile-title{position:relative;z-index:2}.profile-title h2{font-size:clamp(55px,8vw,105px);line-height:.86;letter-spacing:-.065em;margin:12px 0}.profile-body{padding:45px}.profile-section{padding:34px 0;border-top:1px solid var(--line)}.profile-section h3{font-size:12px;text-transform:uppercase;letter-spacing:.17em;margin:0 0 15px}.profile-section p{max-width:820px;font-size:17px;color:#4d5048}.uses{display:flex;flex-wrap:wrap;gap:10px}.use{background:var(--paper2);padding:12px 15px;border-radius:999px;font-size:13px}.breed-list{display:grid;gap:10px}.breed{border:1px solid var(--line);border-radius:16px;background:#faf8f0;overflow:hidden}.breed button{width:100%;text-align:left;border:0;background:none;padding:19px;display:flex;justify-content:space-between;font:inherit;font-weight:800;cursor:pointer}.breed-content{display:none;padding:0 19px 22px;color:#565950}.breed.open .breed-content{display:block}.breed-meta{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}.species-table{width:100%;border-collapse:collapse;min-width:650px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px}.species-table th,.species-table td{padding:14px;text-align:left;border-bottom:1px solid var(--line)}.species-table th{font-size:11px;text-transform:uppercase;letter-spacing:.1em}.warning{padding:17px;border-left:3px solid var(--accent);background:rgba(109,120,84,.09);font-size:14px}.profile-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.fact{padding:20px;border:1px solid var(--line);border-radius:16px;background:#faf8f0}
+
+.image-fallback{position:absolute;inset:0;display:none;place-items:center;background:linear-gradient(145deg,#252a20,#6d7854);color:#f3f0e8;text-align:center;text-transform:uppercase;letter-spacing:.16em;font-size:11px;z-index:-1}.card-media.failed{background-image:none!important}.card-media.failed+.image-fallback{display:grid}
+.reveal{opacity:0;transform:translateY(22px);transition:.8s}.reveal.visible{opacity:1;transform:none}
+@keyframes ken{to{transform:scale(1.06)}}@keyframes up{from{opacity:0;transform:translateY(20px) scale(.985)}to{opacity:1;transform:none}}
+@media(max-width:800px){.nav{top:8px}.navlinks{display:none}.menu{display:block}.nav.mobile-open .navlinks{display:flex;position:absolute;top:58px;right:0;background:rgba(243,240,232,.96);border:1px solid var(--line);border-radius:18px;padding:8px;flex-direction:column;min-width:150px}.intro,.sources{grid-template-columns:1fr;gap:35px}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.grid{grid-template-columns:1fr}.card,.card:nth-child(3n){min-height:500px}.collection-head{display:block}.search{margin-top:25px}.dir-grid{grid-template-columns:1fr}.notes{grid-template-columns:1fr 1fr}.profile-hero{min-height:390px;padding:28px}.profile-body{padding:28px}.profile-facts{grid-template-columns:1fr}.hero-tag{display:none}}
+@media(max-width:480px){.section,.directory-inner{width:min(100% - 28px,1180px);padding:80px 0}.hero-content{width:calc(100% - 28px)}.hero h1{font-size:67px}.stats{margin-top:45px}.notes{grid-template-columns:1fr}.modal{padding:0}.modal-panel{max-height:100svh;border-radius:0}.profile-hero{min-height:370px}.profile-body{padding:22px}.profile-section p{font-size:15px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+
+.breed-visual{display:grid;grid-template-columns:110px 1fr;gap:18px;align-items:stretch}
+.breed-visual .breed-photo{width:110px;height:100%;min-height:110px;object-fit:cover;border-radius:18px;border:1px solid var(--line);background:linear-gradient(135deg,#e9e2d4,#f7f4ec);display:block}
+.breed-visual .breed-photo.fallback{object-fit:contain;padding:14px}
+@media(max-width:640px){.breed-visual{grid-template-columns:88px 1fr;gap:13px}.breed-visual .breed-photo{width:88px;min-height:88px;border-radius:14px}}
+
+
+/* ===== V4 PREMIUM MOTION SYSTEM ===== */
+:root{--ease:cubic-bezier(.22,1,.36,1);--accent2:#aeb98f}
+body{opacity:0;transition:opacity .7s var(--ease);overflow-x:hidden}
+body.page-ready{opacity:1}
+body.page-leaving{opacity:0;transform:scale(.985);transition:.38s var(--ease)}
+::selection{background:#1b2118;color:#f4f0e4}
+.progress-bar{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,#6d7854,#c2caa8,#6d7854);z-index:9999;box-shadow:0 0 18px rgba(109,120,84,.5)}
+.loader{position:fixed;inset:0;background:#11150f;color:#f4f0e4;z-index:10000;display:grid;place-items:center;transition:opacity .7s var(--ease),visibility .7s var(--ease)}
+.loader.hide{opacity:0;visibility:hidden;pointer-events:none}
+.loader-inner{width:min(420px,calc(100% - 40px));text-align:center}
+.loader-mark{font-size:11px;letter-spacing:.22em;text-transform:uppercase;opacity:.7}
+.loader-title{font-size:clamp(38px,8vw,76px);font-weight:900;letter-spacing:-.07em;line-height:.85;margin:18px 0}
+.loader-line{height:1px;background:rgba(255,255,255,.18);overflow:hidden}
+.loader-line i{display:block;height:100%;width:0;background:#dce2c8;animation:loadline 1.35s var(--ease) forwards}
+@keyframes loadline{to{width:100%}}
+.cursor-glow{position:fixed;width:280px;height:280px;border-radius:50%;pointer-events:none;z-index:1;opacity:0;background:radial-gradient(circle,rgba(174,185,143,.12),transparent 67%);transform:translate(-50%,-50%);transition:opacity .25s}
+.has-cursor .cursor-glow{opacity:1}
+.magnetic{will-change:transform}
+.tilt{transform-style:preserve-3d;will-change:transform}
+.reveal{will-change:transform,opacity}
+.reveal.visible{transition-delay:var(--delay,0ms)}
+.section-rule{height:1px;background:var(--line);margin:22px 0 0}
+.detail-toc{position:sticky;top:74px;z-index:20;display:flex;gap:8px;overflow:auto;padding:10px 0;margin:0 0 35px;scrollbar-width:none;background:linear-gradient(var(--paper),rgba(243,240,232,.86));backdrop-filter:blur(12px)}
+.detail-toc::-webkit-scrollbar{display:none}
+.detail-toc a{white-space:nowrap;text-decoration:none;border:1px solid var(--line);padding:8px 11px;border-radius:999px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:.3s var(--ease)}
+.detail-toc a:hover,.detail-toc a.active{background:#171b13;color:#f4f0e4;border-color:#171b13}
+.gallery{display:grid;grid-template-columns:1.35fr .65fr;gap:14px;margin:45px 0 70px}
+.gallery-main,.gallery-side figure{margin:0;overflow:hidden;border-radius:28px;background:#dcd7ca;border:1px solid var(--line);position:relative}
+.gallery-main{min-height:520px}.gallery-side{display:grid;grid-template-rows:1fr 1fr;gap:14px}
+.gallery-side figure{min-height:253px}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1s var(--ease),filter .7s}
+.gallery figure:hover img{transform:scale(1.045)}
+.gallery-side figure:nth-child(2) img{filter:saturate(.65) contrast(1.05)}
+.gallery-caption{position:absolute;left:16px;bottom:16px;padding:8px 11px;border-radius:999px;background:rgba(12,15,10,.7);backdrop-filter:blur(10px);color:#f4f0e4;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.dossier{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}
+.dossier-card{padding:25px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.35);transition:.35s var(--ease)}
+.dossier-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(20,24,14,.08)}
+.dossier-card small{display:block;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);font-size:10px;font-weight:900;margin-bottom:9px}
+.dossier-card strong{font-size:18px;line-height:1.35}
+.related{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:25px}
+.related a{padding:20px;border:1px solid var(--line);border-radius:20px;text-decoration:none;background:#faf8f0;transition:.3s var(--ease)}
+.related a:hover{transform:translateY(-5px);background:#fffdf7}
+.related small{display:block;color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.related b{display:block;font-size:21px;margin:8px 0}
+.related span{font-size:11px;text-transform:uppercase;letter-spacing:.1em}
+.back-top{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(243,240,232,.84);backdrop-filter:blur(12px);z-index:40;opacity:0;pointer-events:none;transform:translateY(12px);transition:.35s var(--ease)}
+.back-top.show{opacity:1;pointer-events:auto;transform:none}
+@media(max-width:800px){.gallery{grid-template-columns:1fr}.gallery-main{min-height:390px}.gallery-side{grid-template-columns:1fr 1fr;grid-template-rows:1fr}.gallery-side figure{min-height:180px}.dossier,.related{grid-template-columns:1fr}.detail-toc{top:58px}}
+@media(prefers-reduced-motion:reduce){body{transition:none}.loader{transition:none}.progress-bar,.cursor-glow{display:none}.gallery img,.dossier-card,.related a{transition:none}}
+
+
+/* ================= V5 ULTIMATE — EXHIBITION SYSTEM ================= */
+:root{
+ --ink:#14170f;--paper:#f3f0e7;--paper2:#fbfaf5;--moss:#626e4c;--sage:#aab594;
+ --gold:#b69a62;--line:rgba(20,23,15,.13);--shadow:0 30px 90px rgba(20,23,15,.10);
+ --ease:cubic-bezier(.2,.8,.2,1)
+}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(circle at 10% 0%,rgba(170,181,148,.12),transparent 30%),var(--paper)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
+main,.page,.content-wrap,.hero{position:relative;z-index:1}
+.kicker-v5{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.hero-v5{position:relative;min-height:88vh;display:grid;align-items:end;overflow:hidden;border-radius:0 0 42px 42px;background:#161a12}
+.hero-v5:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.66));z-index:1}
+.hero-v5-media{position:absolute;inset:0;background-position:center;background-size:cover;transform:scale(1.06);animation:heroKen 16s ease-in-out infinite alternate}
+@keyframes heroKen{to{transform:scale(1.13) translate3d(-1%,1%,0)}}
+.hero-v5-copy{position:relative;z-index:2;color:#f7f4ea;padding:clamp(30px,7vw,92px);max-width:1100px}
+.hero-v5 h1{font-size:clamp(64px,12vw,168px);line-height:.78;letter-spacing:-.085em;margin:14px 0 28px;font-weight:950}
+.hero-v5 p{max-width:650px;font-size:clamp(15px,2vw,21px);line-height:1.55;color:rgba(247,244,234,.8)}
+.hero-orbit{position:absolute;right:7%;top:14%;z-index:2;width:160px;height:160px;border:1px solid rgba(255,255,255,.22);border-radius:50%;animation:orbit 16s linear infinite}
+.hero-orbit:before{content:"FIELD ARCHIVE · XII";position:absolute;inset:0;display:grid;place-items:center;font-size:9px;letter-spacing:.18em;transform:rotate(-20deg)}
+@keyframes orbit{to{transform:rotate(360deg)}}
+.v5-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.v5-panel{border:1px solid var(--line);background:rgba(255,255,255,.34);border-radius:28px;padding:28px;box-shadow:0 15px 50px rgba(20,23,15,.04)}
+.v5-panel.dark{background:#171b13;color:#f4f1e7;border-color:rgba(255,255,255,.08)}
+.stat-v5{grid-column:span 3;min-height:150px;display:flex;flex-direction:column;justify-content:space-between}
+.stat-v5 strong{font-size:clamp(35px,5vw,64px);letter-spacing:-.06em}
+.stat-v5 span{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.section-v5{padding:clamp(55px,9vw,120px) 0}
+.section-v5 h2{font-size:clamp(40px,7vw,88px);line-height:.88;letter-spacing:-.065em;margin:12px 0 25px}
+.stamp{display:inline-flex;gap:9px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:9px 12px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;background:rgba(255,255,255,.4)}
+.stamp i{width:7px;height:7px;border-radius:50%;background:var(--moss);box-shadow:0 0 0 5px rgba(98,110,76,.10)}
+.collection-card{position:relative;min-height:500px;overflow:hidden;border-radius:30px;border:1px solid var(--line);background:#20251a;color:#fff;text-decoration:none;display:flex;align-items:flex-end;transition:.6s var(--ease)}
+.collection-card:nth-child(1),.collection-card:nth-child(7){grid-column:span 7}
+.collection-card:nth-child(2),.collection-card:nth-child(3),.collection-card:nth-child(4),.collection-card:nth-child(5),.collection-card:nth-child(6){grid-column:span 5}
+.collection-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.82;transition:1s var(--ease)}
+.collection-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 28%,rgba(7,9,6,.86))}
+.collection-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.collection-card:hover img{transform:scale(1.08)}
+.collection-card-content{position:relative;z-index:2;padding:30px;width:100%}
+.collection-card .index{font-size:10px;letter-spacing:.18em;opacity:.65}
+.collection-card h3{font-size:clamp(34px,5vw,68px);letter-spacing:-.065em;line-height:.9;margin:10px 0}
+.collection-card p{max-width:560px;color:rgba(255,255,255,.72);font-size:12px;line-height:1.55}
+.pill-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.pill{border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:7px 9px;font-size:9px;letter-spacing:.08em;text-transform:uppercase;background:rgba(0,0,0,.18);backdrop-filter:blur(8px)}
+.timeline{position:relative;margin-top:40px}
+.timeline:before{content:"";position:absolute;left:18px;top:0;bottom:0;width:1px;background:var(--line)}
+.timeline-item{position:relative;padding:0 0 48px 58px}
+.timeline-dot{position:absolute;left:12px;top:5px;width:13px;height:13px;border-radius:50%;background:var(--paper);border:2px solid var(--moss)}
+.timeline-item h3{font-size:24px;margin:0 0 8px;letter-spacing:-.03em}
+.timeline-item p{max-width:750px;line-height:1.7;color:var(--muted)}
+.search-v5{position:relative;max-width:720px;margin:30px auto}
+.search-v5 input{width:100%;padding:20px 55px 20px 22px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.65);font:inherit;outline:none;box-shadow:0 12px 35px rgba(20,23,15,.05);transition:.3s}
+.search-v5 input:focus{border-color:var(--moss);box-shadow:0 15px 45px rgba(20,23,15,.10)}
+.search-v5 span{position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.fact-strip{display:flex;gap:10px;overflow:auto;padding:4px 0 12px;scrollbar-width:none}
+.fact-strip::-webkit-scrollbar{display:none}
+.fact{min-width:230px;border:1px solid var(--line);border-radius:22px;padding:20px;background:var(--paper2)}
+.fact b{display:block;font-size:28px;letter-spacing:-.05em;margin:5px 0}
+.fact small{color:var(--muted);line-height:1.5}
+.source-card{display:flex;gap:18px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--line)}
+.source-no{font-size:10px;letter-spacing:.15em;color:var(--muted)}
+.source-card strong{display:block;margin-bottom:5px}
+.source-card span{color:var(--muted);font-size:12px;line-height:1.5}
+.breed-index{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.breed-index a{display:block;padding:16px;border:1px solid var(--line);border-radius:17px;text-decoration:none;color:inherit;background:rgba(255,255,255,.3);transition:.3s var(--ease)}
+.breed-index a:hover{transform:translateY(-4px);background:#fffdf8}
+.breed-index small{display:block;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.12em}
+.breed-index b{display:block;margin-top:7px;font-size:16px}
+@media(max-width:850px){.stat-v5{grid-column:span 6}.collection-card,.collection-card:nth-child(n){grid-column:span 12;min-height:390px}.breed-index{grid-template-columns:repeat(2,1fr)}.hero-v5{min-height:78vh;border-radius:0 0 28px 28px}.hero-orbit{width:100px;height:100px;right:5%;top:11%}}
+@media(max-width:520px){.stat-v5{grid-column:span 12}.v5-panel{padding:20px}.collection-card-content{padding:22px}.breed-index{grid-template-columns:1fr 1fr}.hero-v5 h1{font-size:65px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}}
+
+.creators-section{margin-top:20px}.creator-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:28px}.creator-card{display:flex;align-items:center;justify-content:space-between;padding:24px 26px;border:1px solid rgba(22,25,18,.14);border-radius:18px;background:rgba(255,255,255,.42);transition:.3s}.creator-card:hover{transform:translateY(-4px);border-color:rgba(22,25,18,.3);box-shadow:0 18px 45px rgba(20,24,18,.08)}.creator-card span{font-size:11px;letter-spacing:.16em;opacity:.55}.creator-card strong{font-size:clamp(20px,3vw,30px);letter-spacing:-.03em}@media(max-width:700px){.creator-list{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav"><div class="brand">ANIMAL ENCYCLOPEDIA</div><div class="navlinks"><a href="#home">Home</a><a href="#animals">Animals</a><a href="#sources">Sources</a><a href="#creators">Creators</a></div><button class="menu" aria-label="Open menu">☰</button></nav>
+<header class="hero" id="home"><div class="hero-media" id="heroMedia"></div><div class="hero-content"><div class="eyebrow">Indian Agriculture · Field Archive</div><h1>ANIMAL<br>ENCYCLOPEDIA</h1><p class="hero-sub">A visual field guide to the animals and species studied in Class 12 Animal Husbandry.</p><div class="creator">Created by Sankalp Tiwari &amp; Shiva Pal</div><a class="cta magnetic" href="#animals">Explore the Collection <span>↘</span></a></div><div class="hero-tag">Class XII · Animal Husbandry</div></header>
+
+<section class="hero-v5" aria-label="Animal Encyclopedia V5 introduction">
+  <div class="hero-v5-media" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg')"></div>
+  <div class="hero-orbit" aria-hidden="true"></div>
+  <div class="hero-v5-copy">
+    <span class="kicker-v5">V5 · THE CURATED ARCHIVE</span>
+    <h1>ANIMAL<br>ENCYCLOPEDIA</h1>
+    <p>Seven animal worlds. Indian breeds and freshwater species. A Class XII field archive designed for discovery, revision and serious agricultural study.</p>
+    <div style="margin-top:24px;display:flex;gap:9px;flex-wrap:wrap">
+      <a class="stamp magnetic" href="#collection" style="color:#f7f4ea;border-color:rgba(255,255,255,.24)">Explore collection →</a>
+      <span class="stamp">Created by Sankalp Tiwari &amp; Shiva Pal</span>
+    </div>
+  </div>
+</section>
+<section class="section-v5" id="collection">
+ <div class="content-wrap">
+  <span class="kicker-v5">01 · The collection</span>
+  <h2>Seven fields.<br>One archive.</h2>
+  <div class="v5-grid">
+   <div class="v5-panel stat-v5"><strong data-counter="7">0</strong><span>Animal groups</span></div>
+   <div class="v5-panel stat-v5"><strong data-counter="58">0</strong><span>Breed / species entries</span></div>
+   <div class="v5-panel stat-v5"><strong data-counter="8">0</strong><span>Study sections</span></div>
+   <div class="v5-panel stat-v5"><strong>∞</strong><span>Field connections</span></div>
+  </div>
+ </div>
+</section>
+<main>
+<section class="section"><div class="intro reveal"><div><div class="kicker">The Collection</div><h2 class="display">Seven animal worlds.<br>One field archive.</h2></div><p class="lead">An editorial-style academic encyclopedia covering the major livestock and freshwater fish groups relevant to Class 12 Animal Husbandry.</p></div>
+<div class="stats reveal"><div class="stat"><b>07</b><span>Animal Groups</span></div><div class="stat"><b id="entryCount">60+</b><span>Breed & Species References</span></div><div class="stat"><b>01</b><span>Focused Encyclopedia</span></div><div class="stat"><b>ICAR</b><span>Research Reference</span></div></div></section>
+<section class="section" id="animals"><div class="collection-head"><div><div class="kicker">Field Catalogue</div><h2 class="display">The animals</h2><div class="result" id="resultCount"></div></div><div class="search"><input id="search" aria-label="Search animals, breeds and species" placeholder="Search Murrah, Rohu, Gujarat, milk…"><span>⌕</span></div></div><div class="grid" id="animalGrid"></div></section>
+<section class="directory"><div class="directory-inner"><div class="kicker">Catalogue Index</div><h2 class="display">Breed & species<br>directory.</h2><div class="dir-grid" id="directory"></div></div></section>
+<section class="section"><div class="kicker">Museum Field Notes</div><h2 class="display">Curated for the field.</h2><div class="notes"><div class="note reveal"><b>Adaptation</b><p>Breed diversity reflects India's varied climates, landscapes and farming systems.</p></div><div class="note reveal"><b>Production</b><p>Milk, meat, eggs, wool, fibre and other outputs connect livestock to rural economies.</p></div><div class="note reveal"><b>Management</b><p>Good housing, nutrition, water, hygiene and preventive care underpin animal welfare and productivity.</p></div><div class="note reveal"><b>Agricultural role</b><p>Livestock and aquaculture can be integrated with crop and resource cycles.</p></div></div></section>
+<section class="section" id="sources"><div class="sources"><div><div class="kicker">Sources</div><h2 class="display">Trace the archive.</h2><p class="lead">Use authoritative agricultural and scientific references for verification, further study and image licensing.</p></div><div class="source-list"><a href="https://icar.gov.in/" target="_blank" rel="noopener">Indian Council of Agricultural Research ↗</a><a href="https://nbagr.icar.gov.in/" target="_blank" rel="noopener">ICAR — National Bureau of Animal Genetic Resources ↗</a><a href="https://www.fao.org/" target="_blank" rel="noopener">FAO — Food and Agriculture Organization ↗</a><a href="https://commons.wikimedia.org/wiki/Category:Livestock_in_India" target="_blank" rel="noopener">Wikimedia Commons — Livestock in India ↗</a><a href="https://commons.wikimedia.org/wiki/Category:Livestock" target="_blank" rel="noopener">Wikimedia Commons — Livestock media ↗</a></div></div></section>
+</main>
+<footer class="footer"><div class="footer-inner"><div><strong>ANIMAL ENCYCLOPEDIA</strong><br><small>Class XII Agriculture · Animal Husbandry Project</small></div><small>Created by Sankalp Tiwari &amp; Shiva Pal</small></div></footer>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Animal profile"><div class="modal-panel"><button class="close" id="close" aria-label="Close profile">×</button><div id="profile"></div></div></div>
+<script>
+const breedImages = {"Gir": "https://commons.wikimedia.org/wiki/Special:FilePath/Gir%20cattle.jpg", "Sahiwal": "https://commons.wikimedia.org/wiki/Special:FilePath/Sahiwal%20cattle.jpg", "Red Sindhi": "https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg", "Tharparkar": "https://commons.wikimedia.org/wiki/Special:FilePath/Tharparkar%20cattle.jpg", "Kankrej": "https://commons.wikimedia.org/wiki/Special:FilePath/Kankrej%20cattle.jpg", "Hariana": "https://commons.wikimedia.org/wiki/Special:FilePath/Hariana%20cattle.jpg", "Rathi": "https://commons.wikimedia.org/wiki/Special:FilePath/Rathi%20cattle.jpg", "Ongole": "https://commons.wikimedia.org/wiki/Special:FilePath/Ongole%20cattle.jpg", "Kangayam": "https://commons.wikimedia.org/wiki/Special:FilePath/Kangayam%20cattle.jpg", "Hallikar": "https://commons.wikimedia.org/wiki/Special:FilePath/Hallikar%20cattle.jpg", "Gaolao": "https://commons.wikimedia.org/wiki/Special:FilePath/Gaolao%20cattle.jpg", "Deoni": "https://commons.wikimedia.org/wiki/Special:FilePath/Deoni%20cattle.jpg", "Murrah": "https://commons.wikimedia.org/wiki/Special:FilePath/Murrah%20buffalo.jpg", "Nili-Ravi": "https://commons.wikimedia.org/wiki/Special:FilePath/Nili-Ravi%20buffalo.jpg", "Jaffarabadi": "https://commons.wikimedia.org/wiki/Special:FilePath/Jaffarabadi%20buffalo.jpg", "Surti": "https://commons.wikimedia.org/wiki/Special:FilePath/Surti%20buffalo.jpg", "Mehsana": "https://commons.wikimedia.org/wiki/Special:FilePath/Mehsana%20buffalo.jpg", "Bhadawari": "https://commons.wikimedia.org/wiki/Special:FilePath/Bhadawari%20buffalo.jpg", "Nagpuri": "https://commons.wikimedia.org/wiki/Special:FilePath/Nagpuri%20buffalo.jpg", "Pandharpuri": "https://commons.wikimedia.org/wiki/Special:FilePath/Pandharpuri%20buffalo.jpg", "Banni": "https://commons.wikimedia.org/wiki/Special:FilePath/Banni%20buffalo.jpg", "Toda": "https://commons.wikimedia.org/wiki/Special:FilePath/Toda%20buffalo.jpg", "Jamunapari": "https://commons.wikimedia.org/wiki/Special:FilePath/Jamunapari%20goat.jpg", "Beetal": "https://commons.wikimedia.org/wiki/Special:FilePath/Beetal%20goat.jpg", "Barbari": "https://commons.wikimedia.org/wiki/Special:FilePath/Barbari%20goat.jpg", "Sirohi": "https://commons.wikimedia.org/wiki/Special:FilePath/Sirohi%20goat.jpg", "Black Bengal": "https://commons.wikimedia.org/wiki/Special:FilePath/Black%20Bengal%20goat.jpg", "Osmanabadi": "https://commons.wikimedia.org/wiki/Special:FilePath/Osmanabadi%20goat.jpg", "Gaddi": "https://commons.wikimedia.org/wiki/Special:FilePath/Gaddi%20goat.jpg", "Sangamneri": "https://commons.wikimedia.org/wiki/Special:FilePath/Sangamneri%20goat.jpg", "Ganjam": "https://commons.wikimedia.org/wiki/Special:FilePath/Ganjam%20goat.jpg", "Chegu": "https://commons.wikimedia.org/wiki/Special:FilePath/Chegu%20goat.jpg", "Sojat": "https://commons.wikimedia.org/wiki/Special:FilePath/Sojat%20goat.jpg", "Marwari": "https://commons.wikimedia.org/wiki/Special:FilePath/Marwari%20sheep.jpg", "Malpura": "https://commons.wikimedia.org/wiki/Special:FilePath/Malpura%20sheep.jpg", "Deccani": "https://commons.wikimedia.org/wiki/Special:FilePath/Deccani%20sheep.jpg", "Mandya": "https://commons.wikimedia.org/wiki/Special:FilePath/Mandya%20sheep.jpg", "Nellore": "https://commons.wikimedia.org/wiki/Special:FilePath/Nellore%20sheep.jpg", "Mecheri": "https://commons.wikimedia.org/wiki/Special:FilePath/Mecheri%20sheep.jpg", "Garole": "https://commons.wikimedia.org/wiki/Special:FilePath/Garole%20sheep.jpg", "Chhotanagpuri": "https://commons.wikimedia.org/wiki/Special:FilePath/Chhotanagpuri%20sheep.jpg", "Poonchi": "https://commons.wikimedia.org/wiki/Special:FilePath/Poonchi%20chicken.jpg", "Changthangi": "https://commons.wikimedia.org/wiki/Special:FilePath/Changthangi%20sheep.jpg", "Madgyal": "https://commons.wikimedia.org/wiki/Special:FilePath/Madgyal%20sheep.jpg", "Large White Yorkshire": "https://commons.wikimedia.org/wiki/Special:FilePath/Large%20White%20Yorkshire%20pig.jpg", "Landrace": "https://commons.wikimedia.org/wiki/Special:FilePath/Landrace%20pig.jpg", "Hampshire": "https://commons.wikimedia.org/wiki/Special:FilePath/Hampshire%20pig.jpg", "Ghungroo": "https://commons.wikimedia.org/wiki/Special:FilePath/Ghungroo%20pig.jpg", "Niang Megha": "https://commons.wikimedia.org/wiki/Special:FilePath/Niang%20Megha%20pig.jpg", "Agonda Goan": "https://commons.wikimedia.org/wiki/Special:FilePath/Agonda%20Goan%20pig.jpg", "Nicobari": "https://commons.wikimedia.org/wiki/Special:FilePath/Nicobari%20pig.jpg", "Andamani": "https://commons.wikimedia.org/wiki/Special:FilePath/Andamani%20pig.jpg", "Nagal": "https://commons.wikimedia.org/wiki/Special:FilePath/Nagal%20pig.jpg", "White Leghorn": "https://commons.wikimedia.org/wiki/Special:FilePath/White%20Leghorn%20chicken.jpg", "Rhode Island Red": "https://commons.wikimedia.org/wiki/Special:FilePath/Rhode%20Island%20Red.jpg", "Aseel": "https://commons.wikimedia.org/wiki/Special:FilePath/Aseel%20chicken.jpg", "Kadaknath": "https://commons.wikimedia.org/wiki/Special:FilePath/Kadaknath%20chicken.jpg", "Ghagus": "https://commons.wikimedia.org/wiki/Special:FilePath/Ghagus%20chicken.jpg", "Ankleshwar": "https://commons.wikimedia.org/wiki/Special:FilePath/Ankleshwar%20chicken.jpg", "Aravali": "https://commons.wikimedia.org/wiki/Special:FilePath/Aravali%20chicken.jpg", "Rohu": "https://commons.wikimedia.org/wiki/Special:FilePath/Rohu%20fish.jpg", "Catla": "https://commons.wikimedia.org/wiki/Special:FilePath/Catla%20catla.jpg", "Mrigal": "https://commons.wikimedia.org/wiki/Special:FilePath/Mrigal.jpg"};
+
+const animals = [{"id": "cattle", "field": "FIELD 01", "name": "Cattle", "scientific": "Bos indicus / Bos taurus", "category": "Large ruminant · Dairy & draught", "uses": ["Milk", "Draught power", "Manure", "Breeding"], "desc": "Cattle are central to Indian mixed farming, with indigenous populations valued for local adaptation and dairy or draught roles.", "overview": "Cattle contribute to dairy production, farm work, manure recycling and breeding programmes. Indigenous cattle are especially important where adaptation to local climates and production systems matters.", "characteristics": "Large ruminants with a four-compartment digestive system adapted to fibrous feeds. Body form, coat, horns and hump development vary among breeds.", "importance": "Cattle support food production and farm livelihoods while fitting into integrated crop–livestock systems.", "management": "Provide clean water, balanced feed, shade and ventilation, hygienic housing, routine observation and appropriate veterinary care. Breeding and vaccination programmes should follow local professional guidance.", "breeds": [["Gir", "Gujarat", "Dairy", "Distinctive convex forehead; well adapted to hot conditions."], ["Sahiwal", "Punjab region", "Dairy", "Recognised for dairy ability and heat tolerance."], ["Red Sindhi", "Sindh region", "Dairy", "Red coat and strong adaptation to warm climates."], ["Tharparkar", "Rajasthan/Sindh region", "Dual purpose", "Hardy cattle associated with arid and semi-arid conditions."], ["Kankrej", "Gujarat/Rajasthan", "Dual purpose", "Strong build with useful draught characteristics."], ["Hariana", "Haryana region", "Dual purpose", "Important north Indian cattle with draught and breeding value."], ["Rathi", "Rajasthan", "Dairy/Dual purpose", "Indigenous breed associated with north-western dry regions."], ["Ongole", "Andhra Pradesh", "Dual purpose", "Large, powerful cattle with strong draught reputation."], ["Kangayam", "Tamil Nadu", "Draught", "Hardy South Indian draught cattle."], ["Hallikar", "Karnataka", "Draught", "Traditional Karnataka draught breed."], ["Gaolao", "Maharashtra/Madhya Pradesh", "Draught/Dual purpose", "Adapted to central Indian farming systems."], ["Deoni", "Maharashtra/Karnataka region", "Dairy/Dual purpose", "Useful indigenous breed with dairy and draught roles."]], "facts": ["Cattle are ruminants.", "Indigenous breeds can be valuable for local adaptation.", "Manure can return nutrients to crop systems."]}, {"id": "buffalo", "field": "FIELD 02", "name": "Buffalo", "scientific": "Bubalus bubalis", "category": "Large ruminant · Dairy", "uses": ["Milk", "Dairy products", "Breeding", "Manure"], "desc": "The water buffalo is a major dairy animal in India, with several recognised breeds adapted to different regions.", "overview": "Buffaloes are important dairy animals. Their milk is comparatively rich in fat and total solids, supporting products such as curd, butter and ghee.", "characteristics": "Large ruminants with dark coats in many populations, broad bodies and characteristic horns whose form differs among breeds.", "importance": "Buffalo dairying contributes to household income, milk supply and rural livestock systems.", "management": "Provide clean water, shade, suitable housing, nutritious feed, hygiene and regular health observation. Breeding and preventive-health programmes should be managed with qualified local guidance.", "breeds": [["Murrah", "Haryana/Punjab region", "Dairy", "Well known for dairy performance; typically has tightly curled horns."], ["Nili-Ravi", "Punjab region", "Dairy", "Recognised dairy buffalo with characteristic markings in many animals."], ["Jaffarabadi", "Gujarat", "Dairy", "Large buffalo associated with the Saurashtra region."], ["Surti", "Gujarat", "Dairy", "Medium-sized dairy buffalo from Gujarat."], ["Mehsana", "Gujarat", "Dairy", "Important dairy breed developed in Gujarat."], ["Bhadawari", "Uttar Pradesh/Madhya Pradesh", "Dairy", "Known for relatively high milk-fat content."], ["Nagpuri", "Maharashtra", "Dairy/Dual purpose", "Adapted to central Indian conditions."], ["Pandharpuri", "Maharashtra", "Dairy", "Regional buffalo breed associated with the Bhima river region."], ["Banni", "Gujarat", "Dairy", "Buffalo population adapted to the Banni grassland system."], ["Toda", "Tamil Nadu", "Dairy/Cultural", "Indigenous buffalo associated with the Nilgiri hills."]], "facts": ["Buffalo milk generally has high fat and total solids.", "Murrah is one of India's best-known dairy buffalo breeds.", "Buffalo management benefits from access to shade and water."]}, {"id": "goat", "field": "FIELD 03", "name": "Goat", "scientific": "Capra hircus", "category": "Small ruminant · Meat & milk", "uses": ["Meat", "Milk", "Skin", "Fibre / hair", "Breeding"], "desc": "Goats are versatile small ruminants valued for meat, milk, skins, fibre or hair and their suitability to diverse smallholder systems.", "overview": "Goat production is important to many small and marginal farming systems because goats can be raised in a range of environments and production systems.", "characteristics": "Small ruminants with diverse body size, coat, horn and ear types. Their browsing behaviour distinguishes them from many grazing livestock.", "importance": "Goats provide marketable products and can form an accessible livestock enterprise for rural households.", "management": "Provide clean housing, adequate forage or balanced feed, safe water, sanitation and routine health monitoring. Parasite control and vaccination should follow veterinary or departmental recommendations.", "breeds": [["Jamunapari", "Uttar Pradesh", "Milk/Meat", "Large Indian goat known for its long ears and dual production value."], ["Beetal", "Punjab region", "Milk/Meat", "Large goat with dairy and meat value."], ["Barbari", "Uttar Pradesh/Rajasthan", "Meat/Milk", "Small to medium goat suited to intensive or semi-intensive systems."], ["Sirohi", "Rajasthan", "Meat/Milk", "Hardy goat associated with dry regions."], ["Black Bengal", "West Bengal and eastern India", "Meat/Skin", "Small goat valued for meat and skin quality."], ["Osmanabadi", "Maharashtra", "Meat/Milk", "Important Deccan goat associated with hardy production systems."], ["Gaddi", "Himachal Pradesh", "Meat/Hair", "Mountain goat associated with Himalayan pastoral systems."], ["Sangamneri", "Maharashtra", "Milk/Meat", "Regional goat suited to parts of the Deccan."], ["Ganjam", "Odisha", "Meat", "Regional eastern Indian meat goat."], ["Chegu", "Himalayan region", "Fibre/Milk", "Mountain goat associated with fine fibre production."], ["Mehsana", "Gujarat", "Milk/Meat", "Goat breed associated with northern Gujarat."], ["Sojat", "Rajasthan", "Meat", "Large-bodied goat from Rajasthan, valued particularly for meat."]], "facts": ["Goats are browsers as well as grazers.", "Black Bengal is particularly associated with eastern India.", "Goat production can fit smallholder farming systems."]}, {"id": "sheep", "field": "FIELD 04", "name": "Sheep", "scientific": "Ovis aries", "category": "Small ruminant · Wool & meat", "uses": ["Wool", "Meat", "Skin", "Manure", "Breeding"], "desc": "Indian sheep breeds show strong regional diversity, supporting wool, meat and pastoral livelihoods across contrasting environments.", "overview": "Sheep production is shaped by climate, grazing resources and the intended product. Indian breeds range from wool-producing mountain sheep to meat-oriented dryland types.", "characteristics": "Ruminants with a woolly fleece in many breeds. Body size, fleece quality, ear form, horn development and colour vary substantially.", "importance": "Sheep support wool and meat production and remain important to pastoral and mixed-farming communities.", "management": "Provide dry, well-ventilated housing, appropriate grazing or feed, clean water, hygiene and regular health monitoring. Flock health programmes should be locally supervised.", "breeds": [["Marwari", "Rajasthan", "Wool/Meat", "Hardy sheep adapted to hot and dry conditions."], ["Malpura", "Rajasthan", "Meat/Wool", "Important Rajasthan sheep used in dryland production."], ["Deccani", "Maharashtra/Karnataka/Telangana region", "Meat/Wool", "Hardy sheep of the Deccan plateau."], ["Mandya", "Karnataka", "Meat", "Small, compact sheep valued for meat production."], ["Nellore", "Andhra Pradesh", "Meat", "Tall sheep associated with the dry south-eastern region."], ["Gaddi", "Himachal Pradesh", "Wool/Meat", "Mountain sheep associated with Himalayan pastoral systems."], ["Mecheri", "Tamil Nadu", "Meat", "Hardy sheep suited to dry southern conditions."], ["Garole", "West Bengal", "Meat/Wool", "Small sheep from eastern India, associated with prolificacy."], ["Chhotanagpuri", "Jharkhand region", "Meat/Wool", "Local sheep of the eastern plateau."], ["Poonchi", "Jammu and Kashmir", "Wool/Meat", "Sheep associated with the western Himalayan region."], ["Changthangi", "Ladakh", "Fine fibre/Wool", "High-altitude sheep associated with cold, dry conditions."], ["Madgyal", "Maharashtra", "Meat", "Large-bodied sheep of the Deccan region."]], "facts": ["Sheep are ruminants.", "Fleece characteristics differ strongly between breeds.", "Mountain sheep can show adaptations to cold and high-altitude environments."]}, {"id": "pig", "field": "FIELD 05", "name": "Pig", "scientific": "Sus scrofa domesticus", "category": "Monogastric · Meat", "uses": ["Meat", "Breeding", "Manure", "Livelihood"], "desc": "Pig production includes organised commercial systems and locally adapted indigenous populations suited to different Indian environments.", "overview": "Pigs are monogastric livestock raised primarily for pork. Production systems range from smallholder units to intensive commercial farms.", "characteristics": "Pigs have a compact body, strong snout and omnivorous feeding biology. Breed type influences growth, body conformation and production purpose.", "importance": "Pig farming can provide income and meat production, particularly where locally appropriate production systems are available.", "management": "Use clean, well-drained housing, adequate space, balanced feed, reliable water and strong hygiene. Preventive health programmes should follow veterinary advice.", "breeds": [["Large White Yorkshire", "United Kingdom", "Meat", "White commercial-type pig with erect ears and strong growth reputation."], ["Landrace", "Denmark", "Meat", "White breed with long body and characteristic drooping ears."], ["Hampshire", "United States/United Kingdom", "Meat", "Black pig with a distinctive white shoulder belt."], ["Ghungroo", "Eastern India", "Indigenous", "Hardy indigenous pig associated with eastern Indian smallholder systems."], ["Niang Megha", "Meghalaya", "Indigenous", "Local pig adapted to north-eastern Indian conditions."], ["Agonda Goan", "Goa", "Indigenous", "Local pig population associated with Goa."], ["Nicobari", "Andaman and Nicobar Islands", "Indigenous", "Local pig adapted to island conditions."], ["Andamani", "Andaman and Nicobar Islands", "Indigenous", "Indigenous island pig population."], ["Nagal", "Nagaland", "Indigenous", "Local pig population associated with Nagaland."]], "facts": ["Pigs are monogastric animals.", "Breed type influences production characteristics.", "Local pig populations can have value for adaptation and conservation."]}, {"id": "poultry", "field": "FIELD 06", "name": "Chicken / Poultry", "scientific": "Gallus gallus domesticus", "category": "Poultry · Eggs & meat", "uses": ["Eggs", "Meat", "Breeding", "Manure"], "desc": "Poultry production includes recognised breeds as well as specialised commercial strains selected for egg or meat production.", "overview": "Chicken production is broadly divided into egg and meat enterprises. It is important to distinguish named breeds from modern commercial strains developed for specific performance.", "characteristics": "Domestic chickens show wide variation in plumage, body form, comb type, skin colour and production traits.", "importance": "Poultry provides eggs and meat and can be integrated into smallholder and commercial farming systems.", "management": "Provide clean, dry, well-ventilated housing, suitable feed and water, sanitation, biosecurity and age-appropriate preventive health programmes under professional guidance.", "breeds": [["White Leghorn", "Mediterranean/Italy", "Egg", "Light-bodied breed widely associated with egg production."], ["Rhode Island Red", "United States", "Egg/Meat", "Hardy dual-purpose breed with rich red-brown plumage."], ["Aseel", "India", "Meat/Traditional", "Indian breed known for strong body conformation and traditional importance."], ["Kadaknath", "Madhya Pradesh", "Meat", "Indigenous breed famous for dark pigmentation of skin and tissues."], ["Ghagus", "India", "Egg/Meat", "Indian indigenous chicken breed."], ["Ankleshwar", "Gujarat", "Egg/Meat", "Indigenous breed associated with Gujarat."], ["Aravali", "Rajasthan", "Egg/Meat", "Indigenous chicken type associated with Rajasthan."], ["Poonchi", "Jammu and Kashmir", "Egg/Meat", "Indigenous chicken associated with the western Himalayan region."]], "species_note": "Commercial broiler and layer strains are specialised commercial populations, not automatically equivalent to traditional breeds.", "facts": ["Commercial broiler and layer strains are selected for specific production goals.", "Kadaknath is associated with Madhya Pradesh.", "Poultry production depends strongly on hygiene and biosecurity."]}, {"id": "fish", "field": "FIELD 07", "name": "Freshwater Fish", "scientific": "Key Indian aquaculture species", "category": "Aquaculture · Freshwater", "uses": ["Food fish", "Aquaculture", "Livelihood", "Composite culture"], "desc": "Rohu, Catla and Mrigal are important freshwater fish species in Indian aquaculture and composite fish culture.", "overview": "Rohu, Catla and Mrigal are species—not breeds. They are widely discussed in Indian freshwater aquaculture, including composite fish culture where species with different feeding zones can use pond resources efficiently.", "characteristics": "These carps occupy different feeding niches and water-column zones. Their exact feeding behaviour varies with life stage and culture conditions, so descriptions such as upper, middle and lower zone are useful generalisations rather than absolute rules.", "importance": "Freshwater aquaculture contributes food production, rural livelihoods and efficient use of pond resources.", "management": "Maintain suitable water quality, stocking practices, feeding and pond hygiene according to recognised aquaculture guidance. Avoid treating general educational information as a substitute for site-specific technical advice.", "species": [["Rohu", "Labeo rohita", "Middle/column zone", "Major Indian carp used in freshwater aquaculture; commonly associated with the middle water column."], ["Catla", "Catla catla", "Upper zone", "Important Indian carp commonly associated with feeding in the upper water zone."], ["Mrigal", "Cirrhinus mrigala", "Lower/bottom zone", "Important Indian carp commonly associated with the lower part of the pond."]], "facts": ["Rohu, Catla and Mrigal are species, not breeds.", "Composite culture combines species with complementary feeding niches.", "Catla, Rohu and Mrigal are commonly described as upper, middle and lower-zone feeders respectively."]}];
+const images={
+ cattle:"https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Sindhi%20cattle.jpg",
+ buffalo:"https://commons.wikimedia.org/wiki/Special:FilePath/Water%20buffalo%20in%20India.jpg",
+ goat:"https://commons.wikimedia.org/wiki/Special:FilePath/Jamunapari%20goat.jpg",
+ sheep:"https://commons.wikimedia.org/wiki/Special:FilePath/Marwari%20sheep.jpg",
+ pig:"https://commons.wikimedia.org/wiki/Special:FilePath/Pig%20in%20India.jpg",
+ poultry:"https://commons.wikimedia.org/wiki/Special:FilePath/Chicken%20poultry.jpg",
+ fish:"https://commons.wikimedia.org/wiki/Special:FilePath/Rohu%20fish.jpg"
+};
+const grid=document.querySelector("#animalGrid"), search=document.querySelector("#search"), count=document.querySelector("#resultCount"), directory=document.querySelector("#directory"), modal=document.querySelector("#modal"), profile=document.querySelector("#profile");
+document.querySelector("#entryCount").textContent=animals.reduce((n,a)=>n+(a.breeds?.length||a.species?.length||0),0);
+function render(q=""){
+ const query=q.trim().toLowerCase();
+ const found=animals.filter(a=>JSON.stringify(a).toLowerCase().includes(query));
+ count.textContent=query?`${found.length} animal group${found.length!==1?"s":""} found for “${q}”`:"Seven animal groups · search across every nested breed and species record";
+ grid.innerHTML=found.length?found.map(a=>`<article class="card reveal card-${a.id}" tabindex="0" data-id="${a.id}"><div class="card-media" style="background-image:url('${images[a.id]}')" role="img" aria-label="${a.name}" data-image="${images[a.id]}"></div><div class="image-fallback">Field image<br>Image unavailable</div><div class="card-content"><div class="field">${a.field}</div><h3>${a.name}</h3><div class="scientific">${a.scientific}</div><p>${a.desc}</p><span class="pill">${a.breeds?.length||a.species?.length} entries · Explore Animal ↗</span></div></article>`).join(""):`<div class="empty">No animals found for “${q}”.</div>`;
+ document.querySelectorAll(".card-media").forEach(m=>{const im=new Image();im.onload=()=>{};im.onerror=()=>m.classList.add("failed");im.src=m.dataset.image});document.querySelectorAll(".card").forEach(c=>{c.addEventListener("click",()=>openProfile(c.dataset.id));c.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openProfile(c.dataset.id)}})});
+ reveal();
+}
+function renderDirectory(){
+ directory.innerHTML=animals.map(a=>`<div class="dir-item"><span>${a.name}</span><small>${a.breeds?.length||a.species?.length} ${a.id==="fish"?"important species":"breeds"}</small></div>`).join("");
+}
+function openProfile(id){ window.location.href="animal-"+encodeURIComponent(id)+".html"; }
+function closeModal(){modal.classList.remove("open");document.body.style.overflow=""}
+document.querySelector("#close").addEventListener("click",closeModal);modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+search.addEventListener("input",e=>render(e.target.value));
+document.querySelector(".menu").addEventListener("click",()=>document.querySelector(".nav").classList.toggle("mobile-open"));
+document.querySelectorAll(".navlinks a").forEach(a=>a.addEventListener("click",()=>document.querySelector(".nav").classList.remove("mobile-open")));
+function reveal(){document.querySelectorAll(".reveal:not(.visible)").forEach(el=>{if(el.getBoundingClientRect().top<innerHeight*.9)el.classList.add("visible")})}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.08});document.querySelectorAll(".reveal").forEach(x=>io.observe(x));
+addEventListener("scroll",reveal,{passive:true});render();renderDirectory();reveal();
+const hero=document.querySelector(".hero");addEventListener("pointermove",e=>{if(matchMedia("(pointer:fine)").matches){const x=(e.clientX/innerWidth-.5)*8,y=(e.clientY/innerHeight-.5)*6;document.querySelector("#heroMedia").style.transform=`scale(1.04) translate(${x}px,${y}px)`}}, {passive:true});
+
+function enhanceBreedImages(){
+  document.querySelectorAll('.breed-card').forEach(card=>{
+    if(card.querySelector('.breed-photo')) return;
+    const nameEl=card.querySelector('.breed-name');
+    if(!nameEl) return;
+    const name=nameEl.textContent.trim();
+    const animalName=(document.querySelector('#modal .profile-title')||{}).textContent||'';
+    const animalKey=Object.keys(images).find(k=>animalName.includes(k))||'cattle';
+    const src=breedImages[name]||images[animalKey]||'';
+    if(!src) return;
+    const img=document.createElement('img');
+    img.className='breed-photo';
+    img.loading='lazy';
+    img.alt=name+' field image';
+    img.src=src;
+    img.onerror=()=>{img.classList.add('fallback');img.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 260%22%3E%3Crect width=%22400%22 height=%22260%22 fill=%22%23eee9de%22/%3E%3Ctext x=%22200%22 y=%22130%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22 font-family=%22Arial%22 font-size=%2222%22 fill=%22%236b6b63%22%3EFIELD IMAGE%3C/text%3E%3C/svg%3E'};
+    card.prepend(img);
+  });
+}
+
+
+const _breedObserver = new MutationObserver(()=>enhanceBreedImages());
+_breedObserver.observe(document.body,{childList:true,subtree:true});
+
+</script>
+<script>
+
+(function(){
+'use strict';
+const qs=(s,r=document)=>r.querySelector(s), qsa=(s,r=document)=>[...r.querySelectorAll(s)];
+const localLink=u=>{try{const x=new URL(u,location.href);return x.origin===location.origin&&!x.hash&&!x.href.startsWith('mailto:')&&!x.href.startsWith('tel:')}catch{return false}};
+document.documentElement.classList.add('js');
+document.body.classList.add('page-ready');
+
+/* Loader */
+const loader=document.createElement('div');
+loader.className='loader';
+loader.innerHTML='<div class="loader-inner"><div class="loader-mark">Indian Agriculture · Field Archive</div><div class="loader-title">ANIMAL<br>ENCYCLOPEDIA</div><div class="loader-line"><i></i></div></div>';
+document.body.prepend(loader);
+window.addEventListener('load',()=>setTimeout(()=>loader.classList.add('hide'),650));
+
+/* Progress */
+const progress=document.createElement('div'); progress.className='progress-bar'; document.body.append(progress);
+const updateProgress=()=>{const d=document.documentElement,s=d.scrollHeight-innerHeight;progress.style.width=(s>0?(scrollY/s)*100:0)+'%'}; addEventListener('scroll',updateProgress,{passive:true}); updateProgress();
+
+/* Back to top */
+const top=document.createElement('button'); top.className='back-top'; top.setAttribute('aria-label','Back to top'); top.textContent='↑'; document.body.append(top);
+addEventListener('scroll',()=>top.classList.toggle('show',scrollY>700),{passive:true}); top.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+
+/* Cursor spotlight + magnetic motion on desktop */
+if(matchMedia('(pointer:fine)').matches){
+ document.body.classList.add('has-cursor');
+ const glow=document.createElement('div'); glow.className='cursor-glow'; document.body.append(glow);
+ addEventListener('pointermove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'},{passive:true});
+ qsa('.magnetic').forEach(el=>el.addEventListener('pointermove',e=>{
+   const r=el.getBoundingClientRect(),x=(e.clientX-r.left-r.width/2)/r.width,y=(e.clientY-r.top-r.height/2)/r.height;
+   el.style.transform=`translate(${x*9}px,${y*7}px)`;
+ }));
+ qsa('.magnetic').forEach(el=>el.addEventListener('pointerleave',()=>el.style.transform=''));
+ qsa('.card').forEach(card=>{
+   card.classList.add('tilt');
+   card.addEventListener('pointermove',e=>{
+     const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+     card.style.transform=`perspective(900px) rotateX(${y*-3}deg) rotateY(${x*3}deg) translateY(-7px)`;
+   });
+   card.addEventListener('pointerleave',()=>card.style.transform='');
+ });
+}
+
+/* Reveal observer */
+const rev=qsa('.reveal');
+if('IntersectionObserver' in window){
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+ rev.forEach((el,i)=>{el.style.setProperty('--delay',Math.min(i*45,240)+'ms');io.observe(el)});
+}else rev.forEach(e=>e.classList.add('visible'));
+
+/* Smooth local page transitions */
+qsa('a').forEach(a=>{
+ a.addEventListener('click',e=>{
+  if(e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey) return;
+  const href=a.getAttribute('href');
+  if(!href||href.startsWith('#')||!localLink(href)||a.target==='_blank') return;
+  e.preventDefault(); document.body.classList.add('page-leaving'); setTimeout(()=>location.href=href,280);
+ });
+});
+
+/* Mobile nav */
+const nav=qs('.nav'); const menu=qs('.menu');
+if(nav&&menu) menu.addEventListener('click',()=>nav.classList.toggle('mobile-open'));
+
+/* Build sticky TOC for detailed pages */
+const sections=qsa('.detail-section');
+if(sections.length){
+ const toc=document.createElement('nav'); toc.className='detail-toc'; toc.setAttribute('aria-label','On this page');
+ sections.forEach((s,i)=>{
+   if(!s.id) s.id='section-'+(i+1);
+   const heading=qs('h2',s); if(!heading)return;
+   const a=document.createElement('a'); a.href='#'+s.id; a.textContent=String(i+1).padStart(2,'0')+' · '+heading.textContent.replace(/^\s+/,'').slice(0,28);
+   toc.append(a);
+ });
+ const wrap=qs('.content-wrap'); if(wrap) wrap.prepend(toc);
+ const links=qsa('a',toc);
+ const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(x=>x.classList.toggle('active',x.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-35% 0px -55% 0px'});
+ sections.forEach(s=>io2.observe(s));
+}
+
+/* Add a premium image gallery to detailed animal pages */
+if(qs('.detail-hero') && !qs('.gallery')){
+ const heroImg=qs('.detail-hero-media img');
+ const src=heroImg?.getAttribute('src')||'';
+ const alt=heroImg?.getAttribute('alt')||'Animal field image';
+ const section=document.createElement('section'); section.className='gallery reveal';
+ section.innerHTML=`<figure class="gallery-main"><img loading="lazy" src="${src}" alt="${alt} — field archive image"><span class="gallery-caption">01 · Field view</span></figure>
+ <div class="gallery-side"><figure><img loading="lazy" src="${src}" alt="${alt} — specimen detail" style="object-position:30% 50%"><span class="gallery-caption">02 · Recognition</span></figure>
+ <figure><img loading="lazy" src="${src}" alt="${alt} — archive detail" style="object-position:70% 50%"><span class="gallery-caption">03 · Archive plate</span></figure></div>`;
+ qs('.content-wrap')?.prepend(section);
+}
+
+/* Add expanded animal information blocks on animal pages */
+const title=qs('.detail-copy h1')?.textContent?.trim();
+if(title && !qs('.dossier')){
+ const copy={
+  Cattle:{biology:'Ruminant livestock with a four-compartment stomach; major roles include milk, draught work, manure and breeding.',recognition:'Breed identification combines coat, body conformation, horns, hump development, head shape and regional association.',system:'Fits integrated crop–livestock systems through milk, farm work, manure recycling and breeding value.',care:'Clean water, suitable feed, shade, ventilation, hygienic housing, preventive health care and humane handling.'},
+  Buffalo:{biology:'Domestic water buffalo (Bubalus bubalis), widely important in Indian dairy systems and valued for milk with relatively high fat and total solids.',recognition:'Breed recognition uses body size, horn form, coat, head shape, udder traits and home tract.',system:'Important for dairy livelihoods, breeding, manure recycling and, in suitable systems, farm work.',care:'Reliable water access, heat management, balanced feeding, clean housing and routine health observation are especially important.'},
+  Goat:{biology:'Small ruminant livestock valued for meat, milk, skin and fibre/hair; goats are adaptable to many smallholder systems.',recognition:'Study body size, coat pattern, ear and horn form, facial profile and regional association.',system:'Often fits smallholder and mixed farming because of flexible feeding and relatively small body size.',care:'Provide clean water, appropriate roughage/concentrates, dry housing, parasite control and careful kid management.'},
+  Sheep:{biology:'Small ruminants primarily associated with grazing, meat and wool/fibre production, with breeds adapted to diverse Indian environments.',recognition:'Use fleece or hair characteristics, body form, colour, ears, horns where present and home tract.',system:'Supports wool/fibre, meat, manure and rural livelihoods, especially in grazing-based systems.',care:'Good grazing or feed supply, clean water, shelter, parasite management, hoof care and flock health monitoring.'},
+  Pig:{biology:'Monogastric livestock primarily raised for meat; pig production can also contribute manure and livelihood income.',recognition:'Breed study considers body colour, ear form, body shape, growth type, production purpose and origin.',system:'Important in specialised and smallholder meat-production systems where local conditions and management are suitable.',care:'Clean housing, clean water, balanced feed, biosecurity, sanitation, temperature management and humane handling.'},
+  'Chicken / Poultry':{biology:'Domestic poultry are kept mainly for eggs and meat. Breeds and commercial strains should be distinguished in study notes.',recognition:'Observe plumage, body form, comb, shank characteristics and documented breed descriptors.',system:'Egg and meat production can be integrated into smallholder, backyard and commercial systems.',care:'Balanced feed, clean water, ventilation, litter hygiene, biosecurity and appropriate vaccination/health programmes.'},
+  Fish:{biology:'The collection focuses on important freshwater species used in Indian aquaculture: Rohu, Catla and Mrigal.',recognition:'Fish species are studied by body form, scale pattern, mouth position, feeding zone and scientific identity.',system:'Composite fish culture commonly combines complementary feeding niches to use pond resources efficiently.',care:'Water quality, stocking, feeding, pond preparation, health monitoring and responsible management are central to aquaculture.'}
+ };
+ const d=copy[title];
+ if(d){
+   const sec=document.createElement('section'); sec.className='detail-section reveal';
+   sec.innerHTML='<div class="section-kicker">02A · Expanded field dossier</div><h2>Study the system, not just the name.</h2><div class="dossier">'+
+   [['Biology & identity',d.biology],['Field recognition',d.recognition],['Agricultural system',d.system],['Management focus',d.care]].map(x=>`<article class="dossier-card"><small>${x[0]}</small><strong>${x[1]}</strong></article>`).join('')+'</div>';
+   qs('.content-wrap')?.insertBefore(sec,qs('.content-wrap').children[1]||null);
+ }
+}
+
+/* Breed profile: richer dossier + visual gallery + related entries */
+const profileTitle=qs('.detail-copy h1')?.textContent?.trim();
+if(profileTitle && location.pathname.endsWith('breed.html')){
+ const script=[...document.scripts].find(s=>s.textContent.includes('const animals='));
+ if(script){
+  try{
+   const m=script.textContent.match(/const animals=(.*?);const breedImages=/s);
+   if(m){
+    const animals=JSON.parse(m[1]);
+    const p=new URLSearchParams(location.search),aid=p.get('animal'),bn=p.get('breed');
+    const a=animals.find(x=>x.id===aid), entries=a&&(a.breeds||a.species)||[], entry=entries.find(x=>x[0]===bn);
+    if(a&&entry){
+      const [name,region,type,desc]=entry;
+      const existingGallery=qs('.gallery');
+      if(!existingGallery){
+       const src=qs('.detail-hero-media img')?.src||'';
+       const g=document.createElement('section'); g.className='gallery reveal';
+       g.innerHTML=`<figure class="gallery-main"><img loading="lazy" src="${src}" alt="${name} — primary field image"><span class="gallery-caption">01 · Primary specimen</span></figure>
+       <div class="gallery-side"><figure><img loading="lazy" src="${src}" alt="${name} — identification view" style="object-position:25% 50%"><span class="gallery-caption">02 · Identification</span></figure><figure><img loading="lazy" src="${src}" alt="${name} — archive view" style="object-position:75% 50%"><span class="gallery-caption">03 · Archive crop</span></figure></div>`;
+       qs('.content-wrap')?.prepend(g);
+      }
+      const sec=document.createElement('section'); sec.className='detail-section reveal';
+      const role=(type||'').toLowerCase().includes('dairy')?'Dairy-oriented':(type||'').toLowerCase().includes('draught')?'Draught-oriented':(type||'').toLowerCase().includes('wool')?'Wool/fibre-oriented':(type||'').toLowerCase().includes('meat')?'Meat-oriented':'Regionally adapted production';
+      sec.innerHTML=`<div class="section-kicker">05A · Detailed breed dossier</div><h2>${name}: a deeper field study</h2><div class="dossier">
+      <article class="dossier-card"><small>Recognised identity</small><strong>${name} is documented as a ${aid==='fish'?'freshwater species':'breed'} associated with ${region}.</strong></article>
+      <article class="dossier-card"><small>Production orientation</small><strong>${role}. Farm value depends on genetics, nutrition, health and management.</strong></article>
+      <article class="dossier-card"><small>Distinguishing clue</small><strong>${desc}</strong></article>
+      <article class="dossier-card"><small>Adaptation principle</small><strong>Study how the animal's form, behaviour and production role relate to its home environment and farming system.</strong></article>
+      <article class="dossier-card"><small>Management principle</small><strong>Match feed, water, housing, health care and handling to age, climate and production purpose.</strong></article>
+      <article class="dossier-card"><small>Academic caution</small><strong>A photograph alone is not enough for definitive breed identification; use recognised institutional descriptors.</strong></article>
+      </div>`;
+      const sections=qsa('.detail-section'); const target=sections[Math.min(4,sections.length-1)]; qs('.content-wrap')?.insertBefore(sec,target||null);
+
+      const rel=document.createElement('section'); rel.className='detail-section reveal';
+      const related=entries.filter(x=>x[0]!==name).slice(0,3);
+      rel.innerHTML=`<div class="section-kicker">10 · Related collection</div><h2>Continue exploring</h2><div class="related">${related.map(x=>`<a href="breed.html?animal=${encodeURIComponent(aid)}&breed=${encodeURIComponent(x[0])}"><small>${aid==='fish'?'Species':'Breed'} · ${x[1]}</small><b>${x[0]}</b><span>Open full profile →</span></a>`).join('')}</div>`;
+      qs('.content-wrap')?.append(rel);
+    }
+   }
+  }catch(err){}
+ }
+}
+})();
+
+</script><script>
+(function(){
+ const root=document.body;
+ const mk=(tag,cls,html='')=>{const e=document.createElement(tag);e.className=cls;e.innerHTML=html;return e};
+ // Loader
+ const L=mk('div','v5-loader','<div class="v5-loader-inner"><span>INDIAN AGRICULTURE · FIELD ARCHIVE</span><strong>ANIMAL<br>ENCYCLOPEDIA</strong><i></i><small>CLASS XII · CURATING COLLECTION</small></div>');
+ root.prepend(L);
+ const Lstyle=document.createElement('style');Lstyle.textContent=`
+ .v5-loader{position:fixed;inset:0;background:#151910;color:#f3f0e7;z-index:20000;display:grid;place-items:center;transition:.8s cubic-bezier(.2,.8,.2,1)}
+ .v5-loader.done{opacity:0;visibility:hidden;pointer-events:none}
+ .v5-loader-inner{width:min(560px,calc(100% - 44px))}
+ .v5-loader span,.v5-loader small{font-size:9px;letter-spacing:.2em;opacity:.6}
+ .v5-loader strong{display:block;font-size:clamp(52px,11vw,120px);line-height:.76;letter-spacing:-.08em;margin:25px 0}
+ .v5-loader i{display:block;height:1px;background:#f3f0e7;transform-origin:left;animation:v5load 1.2s ease forwards}
+ @keyframes v5load{from{transform:scaleX(0)}to{transform:scaleX(1)}}`;document.head.append(Lstyle);
+ addEventListener('load',()=>setTimeout(()=>L.classList.add('done'),650));
+ // Global progress
+ const P=mk('div','v5-progress');root.append(P);P.style.cssText='position:fixed;top:0;left:0;width:0;height:3px;background:#626e4c;z-index:15000;transition:width .1s';
+ const prog=()=>{let d=document.documentElement;P.style.width=(scrollY/(d.scrollHeight-innerHeight||1)*100)+'%'};
+ addEventListener('scroll',prog,{passive:true});prog();
+ // reveal all major blocks
+ const candidates=[...document.querySelectorAll('section,article,.card,.panel,.source-card,.timeline-item,.breed-card,.v5-panel,.collection-card')];
+ candidates.forEach((e,i)=>{e.classList.add('v5-reveal');e.style.setProperty('--v5-delay',Math.min(i%7*55,330)+'ms')});
+ const st=document.createElement('style');st.textContent='.v5-reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1) var(--v5-delay),transform .8s cubic-bezier(.2,.8,.2,1) var(--v5-delay)}.v5-reveal.v5-in{opacity:1;transform:none}';document.head.append(st);
+ if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('v5-in');io.unobserve(x.target)}}),{threshold:.08});candidates.forEach(e=>io.observe(e))}else candidates.forEach(e=>e.classList.add('v5-in'));
+ // Animated counters
+ document.querySelectorAll('[data-counter]').forEach(el=>{let target=parseInt(el.dataset.counter,10)||0;let done=false;const go=()=>{if(done)return;done=true;let t0=performance.now();const f=t=>{let p=Math.min(1,(t-t0)/1000),v=Math.round((1-Math.pow(1-p,3))*target);el.textContent=v.toLocaleString();if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)};if('IntersectionObserver'in window)new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)go()}),{threshold:.8}).observe(el);else go()});
+ // Tilt for premium cards
+ if(matchMedia('(pointer:fine)').matches){
+   document.querySelectorAll('.collection-card,.v5-panel,.breed-index a').forEach(card=>{card.addEventListener('pointermove',e=>{let r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(900px) rotateX(${y*-1.8}deg) rotateY(${x*1.8}deg) translateY(-5px)`});card.addEventListener('pointerleave',()=>card.style.transform='')});
+ }
+ // Local page transitions
+ document.querySelectorAll('a[href]').forEach(a=>a.addEventListener('click',e=>{if(e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;let h=a.getAttribute('href');if(!h||h.startsWith('#')||h.startsWith('http')||h.startsWith('mailto:'))return;e.preventDefault();root.classList.add('v5-leave');setTimeout(()=>location.href=h,260)}));
+ const s=document.createElement('style');s.textContent='.v5-leave{opacity:0;transform:scale(.99);transition:.28s ease}';document.head.append(s);
+ // Back to top
+ const b=mk('button','v5-top','↑');b.setAttribute('aria-label','Back to top');b.style.cssText='position:fixed;right:18px;bottom:18px;width:45px;height:45px;border-radius:50%;border:1px solid rgba(20,23,15,.15);background:rgba(243,240,231,.86);backdrop-filter:blur(10px);z-index:1000;opacity:0;pointer-events:none;transition:.3s';root.append(b);b.onclick=()=>scrollTo({top:0,behavior:'smooth'});addEventListener('scroll',()=>{b.style.opacity=scrollY>650?'1':'0';b.style.pointerEvents=scrollY>650?'auto':'none'},{passive:true});
+ // Keyboard escape can close existing modals
+ addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('[aria-modal="true"],.modal,.drawer').forEach(x=>{if(x.style.display==='block'||x.classList.contains('open')){x.classList.remove('open');x.style.display='none'}})}});
+})();
+</script></body></html>
