@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1b2018"/><stop offset="1" stop-color="#566047"/></linearGradient><radialGradient id="r"><stop stop-color="#c99a55" stop-opacity=".35"/><stop offset="1" stop-color="#c99a55" stop-opacity="0"/></radialGradient></defs>
+<rect width="1600" height="1000" fill="url(#g)"/><circle cx="1220" cy="250" r="360" fill="url(#r)"/>
+<path d="M0 820 C330 720 540 900 820 790 S1260 700 1600 820 V1000 H0Z" fill="#0e120d" opacity=".6"/>
+<g fill="#d8b17a"><ellipse cx="800" cy="570" rx="220" ry="155"/><circle cx="1000" cy="440" r="105"/><path d="M1060 410 l120 35 -120 35Z" fill="#c98b35"/><path d="M980 345 q30 -70 60 0 q30 -70 60 0 q30 -60 55 5" fill="none" stroke="#b64f43" stroke-width="25"/><path d="M720 690 l-25 160 M850 690 l20 160" stroke="#d7a33b" stroke-width="28" stroke-linecap="round"/></g>
+<g fill="#f5f0e4"><text x="90" y="120" font-family="Arial,sans-serif" font-size="26" letter-spacing="7" opacity=".7">ANIMAL ENCYCLOPEDIA · FIELD ARCHIVE</text><text x="90" y="850" font-family="Arial,sans-serif" font-size="82" font-weight="700" letter-spacing="-3">CHICKEN / POULTRY</text><text x="94" y="900" font-family="Arial,sans-serif" font-size="24" letter-spacing="5" opacity=".75">GALLUS GALLUS DOMESTICUS</text></g>
+</svg>

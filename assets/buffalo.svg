@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1b2018"/><stop offset="1" stop-color="#566047"/></linearGradient><radialGradient id="r"><stop stop-color="#78806a" stop-opacity=".35"/><stop offset="1" stop-color="#78806a" stop-opacity="0"/></radialGradient></defs>
+<rect width="1600" height="1000" fill="url(#g)"/><circle cx="1220" cy="250" r="360" fill="url(#r)"/>
+<path d="M0 820 C330 720 540 900 820 790 S1260 700 1600 820 V1000 H0Z" fill="#0e120d" opacity=".6"/>
+<g fill="#171914"><ellipse cx="780" cy="550" rx="330" ry="190"/><ellipse cx="1110" cy="465" rx="140" ry="125"/><rect x="570" y="680" width="70" height="180" rx="28"/><rect x="850" y="690" width="70" height="170" rx="28"/><rect x="1040" y="650" width="65" height="210" rx="28"/><rect x="1190" y="625" width="65" height="235" rx="28"/><path d="M1080 370 Q990 240 900 330 Q1010 330 1090 420Z" fill="#d4c6a2"/><path d="M1140 370 Q1260 235 1340 335 Q1230 330 1140 425Z" fill="#d4c6a2"/></g>
+<g fill="#f5f0e4"><text x="90" y="120" font-family="Arial,sans-serif" font-size="26" letter-spacing="7" opacity=".7">ANIMAL ENCYCLOPEDIA · FIELD ARCHIVE</text><text x="90" y="850" font-family="Arial,sans-serif" font-size="82" font-weight="700" letter-spacing="-3">BUFFALO</text><text x="94" y="900" font-family="Arial,sans-serif" font-size="24" letter-spacing="5" opacity=".75">BUBALUS BUBALIS</text></g>
+</svg>
